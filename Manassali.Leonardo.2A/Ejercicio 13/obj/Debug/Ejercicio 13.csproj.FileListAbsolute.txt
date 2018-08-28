@@ -1,0 +1,7 @@
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 13\bin\Debug\Ejercicio 13.exe.config
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 13\bin\Debug\Ejercicio 13.exe
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 13\bin\Debug\Ejercicio 13.pdb
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 13\obj\Debug\Ejercicio 13.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 13\obj\Debug\Ejercicio 13.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 13\obj\Debug\Ejercicio 13.exe
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 13\obj\Debug\Ejercicio 13.pdb

@@ -1,0 +1,7 @@
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 05\bin\Debug\Ejercicio 05.exe.config
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 05\bin\Debug\Ejercicio 05.exe
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 05\bin\Debug\Ejercicio 05.pdb
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 05\obj\Debug\Ejercicio 05.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 05\obj\Debug\Ejercicio 05.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 05\obj\Debug\Ejercicio 05.exe
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 05\obj\Debug\Ejercicio 05.pdb

@@ -1,0 +1,7 @@
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio clase 2\bin\Debug\Ejercicio clase 2.exe.config
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio clase 2\bin\Debug\Ejercicio clase 2.exe
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio clase 2\bin\Debug\Ejercicio clase 2.pdb
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio clase 2\obj\Debug\Ejercicio clase 2.csprojAssemblyReference.cache
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio clase 2\obj\Debug\Ejercicio clase 2.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio clase 2\obj\Debug\Ejercicio clase 2.exe
+C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio clase 2\obj\Debug\Ejercicio clase 2.pdb
