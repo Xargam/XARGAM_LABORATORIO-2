@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +27,7 @@ namespace Ejercicio_13
 
             Console.WriteLine("Ingrese un numero binario para transformarlo a decimal:");
             bin = Console.ReadLine();
-            //numero = Conversor.BinarioDecimal(bin);
+            numero = Conversor.BinarioDecimal(bin);
             Console.WriteLine("El numero {0} en base 10 es : {1} .", bin, numero);
 
             Console.ReadLine();

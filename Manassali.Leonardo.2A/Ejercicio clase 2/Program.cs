@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +10,10 @@ namespace EjercicioClase02
     {
         static void Main(string[] args)
         {
-            Entidades.Sello.mensaje = "Leonardo";
-            Entidades.Sello.color = ConsoleColor.Blue;
-            Entidades.Sello.imprimir();
+            Entidades.Sello.Mensaje = "";
+            Entidades.Sello.Color = ConsoleColor.DarkMagenta;
             Entidades.Sello.ImprimirEnColor();
-            Entidades.Sello.borrar();
+            Entidades.Sello.Borrar();
             Console.Read();
         }
     }

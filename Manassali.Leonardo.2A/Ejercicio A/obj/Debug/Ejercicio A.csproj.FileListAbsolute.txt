@@ -5,3 +5,10 @@ C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\obj\Debug\Ejercici
 C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\obj\Debug\Ejercicio A.csproj.CoreCompileInputs.cache
 C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\obj\Debug\EjercicioA.exe
 C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\obj\Debug\EjercicioA.pdb
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\bin\Debug\EjercicioA.exe.config
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\bin\Debug\EjercicioA.exe
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\bin\Debug\EjercicioA.pdb
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\obj\Debug\Ejercicio A.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\obj\Debug\Ejercicio A.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\obj\Debug\EjercicioA.exe
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio A\obj\Debug\EjercicioA.pdb
