@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /*
 13. Desarrollar una clase llamada Conversor, que posea dos métodos de clase(estáticos):
@@ -19,8 +15,14 @@ namespace Datos
 			string binario = "";
 			string aux = "";
 			long entero = (long)num;
-			num -= entero;
+			bool negativo = false;
 
+			if( entero < 0)
+			{
+				negativo = true;
+				entero *= -1;
+			}
+			num -= entero;
 			while (entero > 1)
 			{
 				aux += entero % 2;
@@ -37,8 +39,12 @@ namespace Datos
 					num *= 2;
 					entero = (long)num;
 					binario += entero;
-					num -= entero;
+
 				}
+			}
+			if( negativo == true )
+			{
+				binario = binario.Insert(0, "-");
 			}
 			return binario;
 		}
@@ -48,24 +54,34 @@ namespace Datos
 			double numDecimal = 0;
 			string aux;
 			int point = num.IndexOf('.');
-			bool isDecimal = false; 
+			int pointAux = 0;
+			bool isDecimal = false;
+
 
 			point = (point < 0) ? num.IndexOf(',') : point;
-			point = (point < 0) ? num.Length : --point;
+			point = (point < 0) ? num.Length : point;
 
-			for (int i = 0; i < point+1; i++)
+			for (int i = 0; i < point; i++)
 			{
-				aux = num.Substring(i, 1);
+				aux = (isDecimal == false) ? num.Substring(i, 1) : num.Substring(pointAux + i - 1, 1);
 				if (aux == "1")
 				{
-					numDecimal += Math.Pow(2, (point - i) );
+					numDecimal += (isDecimal == true) ? Math.Pow(2, -i) : Math.Pow(2, point - i - 1);
 				}
 				aux = "";
-				if (i == point && num.Length > point)
+				if (i == point - 1 && num.Length > point && isDecimal == false)
 				{
-					num = num.Remove(point+1, 1);
-					point += (num.Length - point);
+					isDecimal = true;
+					num = num.Remove(point, 1);
+					pointAux = point;
+					point = (num.Length - point) + 1;
+					i = 0;
 				}
+			}
+
+			if (num.StartsWith("-") == true)
+			{
+				numDecimal *= -1;
 			}
 			return numDecimal;
 		}

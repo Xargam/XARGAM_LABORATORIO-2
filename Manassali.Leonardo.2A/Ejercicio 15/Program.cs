@@ -27,27 +27,35 @@ namespace Ejercicio_15
         {
             double operando1;
             double operando2;
+            double resultado;
             char operacion;
-            
-            Console.WriteLine("Ingrese el primer operando:");
-            operando1 = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Ingrese el segundo operando:");
-            operando2 = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Ingrese la operacion a realizar (+ - * / ):");
-            operacion = Console.ReadKey(true).KeyChar;
-            /*
-            if ( operacion == '+' || operacion == '-' && operacion != '/' && operacion != '*')
+            char quit;
+            do
             {
-               Calculadora.Calcular(operando1,operando2,operacion)
+                Console.WriteLine("Ingrese el primer operando:");
+                operando1 = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Ingrese el segundo operando:");
+                operando2 = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Ingrese la operacion a realizar (+ - * / ):");
+                operacion = Console.ReadKey(true).KeyChar;
+
+                if (operacion == '+' || operacion == '-' || operacion == '/' || operacion == '*')
+                {
+                    resultado = Calculadora.Calcular(operando1, operando2, operacion);
+                    Console.WriteLine("El resultado de la operacion es: {0} .", resultado);
+                }
+                else
+                {
+                    Console.WriteLine("Operador erróneo.");
+                }
+                Console.WriteLine("Continuar: S/N");
+                quit = Console.ReadKey(true).KeyChar;
+                quit = Char.ToLower(quit);
             }
-            else
-            {
-               
-                 = double.Parse(Console.ReadLine());
-                Console.WriteLine("Operador erróneo.");
-            }*/
+            while (quit == 's');
+            
         }
     }
 }
