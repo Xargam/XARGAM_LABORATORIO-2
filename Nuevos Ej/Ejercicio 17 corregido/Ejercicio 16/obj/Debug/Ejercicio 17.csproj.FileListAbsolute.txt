@@ -1,0 +1,13 @@
+D:\Mis Documentos\Visual Studio 2012\Projects\Ejercicio 16\Ejercicio 16\obj\Debug\Ejercicio 17.csprojResolveAssemblyReference.cache
+D:\Mis Documentos\Visual Studio 2012\Projects\Ejercicio 16\Ejercicio 16\bin\Debug\Ejercicio 16.exe.config
+D:\Mis Documentos\Visual Studio 2012\Projects\Ejercicio 16\Ejercicio 16\bin\Debug\Ejercicio 16.exe
+D:\Mis Documentos\Visual Studio 2012\Projects\Ejercicio 16\Ejercicio 16\bin\Debug\Ejercicio 16.pdb
+D:\Mis Documentos\Visual Studio 2012\Projects\Ejercicio 16\Ejercicio 16\obj\Debug\Ejercicio 16.exe
+D:\Mis Documentos\Visual Studio 2012\Projects\Ejercicio 16\Ejercicio 16\obj\Debug\Ejercicio 16.pdb
+D:\Mis Documentos\Visual Studio 2012\Projects\Ejercicio 16\Ejercicio 16\bin\Debug\Ejercicio 17.exe.config
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 17 corregido\Ejercicio 16\bin\Debug\Ejercicio 16.exe.config
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 17 corregido\Ejercicio 16\obj\Debug\Ejercicio 16.exe
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 17 corregido\Ejercicio 16\obj\Debug\Ejercicio 16.pdb
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 17 corregido\Ejercicio 16\bin\Debug\Ejercicio 16.exe
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 17 corregido\Ejercicio 16\bin\Debug\Ejercicio 16.pdb
+C:\Users\alumno\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio 17 corregido\Ejercicio 16\obj\Debug\Ejercicio 17.csprojResolveAssemblyReference.cache
