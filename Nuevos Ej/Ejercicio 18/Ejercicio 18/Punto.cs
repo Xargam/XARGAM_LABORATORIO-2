@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,29 +6,38 @@ using System.Threading.Tasks;
 
 namespace Geometria
 {
-    public class Punto
+  public class Punto
+  {
+    #region Atributos
+
+    private int x;
+    private int y;
+
+    #endregion
+
+    #region Constructor
+
+    Punto(int x , int y )
     {
-        #region Atributos
-
-        private int x;
-        private int y;
-
-        #endregion
-
-        #region Metodos
-
-        public int GetX()
-        {
-            return this.x;
-        }
-
-        public int GetY()
-        {
-            return this.y;
-        }
-
-        #endregion
-
 
     }
+
+    #endregion
+
+    #region Metodos
+
+    private int GetX()
+    {
+      return this.x;
+    }
+
+    private int GetY()
+    {
+      return this.y;
+    }
+
+    #endregion
+
+
+  }
 }
