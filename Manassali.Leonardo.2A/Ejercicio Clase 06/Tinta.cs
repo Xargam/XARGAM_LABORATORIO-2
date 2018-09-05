@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clase_05
+namespace Ejercicio_Clase_06
 {
   public class Tinta
   {

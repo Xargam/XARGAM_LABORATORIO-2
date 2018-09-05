@@ -10,8 +10,8 @@ namespace Geometria
   {
     #region Atributos
 
-    private int x;
-    private int y;
+    private int _x;
+    private int _y;
 
     #endregion
 
@@ -19,25 +19,25 @@ namespace Geometria
 
     Punto(int x , int y )
     {
-
+      this.x = x;
+      this.y = y;
     }
 
     #endregion
 
     #region Metodos
 
-    private int GetX()
+    public int GetX()
     {
-      return this.x;
+      return this._x;
     }
 
-    private int GetY()
+    public int GetY()
     {
-      return this.y;
+      return this._y;
     }
 
     #endregion
-
 
   }
 }

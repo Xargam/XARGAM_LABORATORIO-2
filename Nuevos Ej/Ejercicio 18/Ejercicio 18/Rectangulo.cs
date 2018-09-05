@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 using Geometria;
 
 /*
-18. Escribir una aplicación con estos dos espacios de nombres (namespaces): Geometría y
-PruebaGeometria.
-Dentro del espacio de nombres Geometría se deberán escribir dos clases: Punto y Rectangulo.
-a. La clase Punto ha de tener dos atributos privados con acceso de sólo lectura (sólo con
-getters), que serán las coordenadas del punto.
-b. La clase Rectangulo tiene los atributos de tipo Punto vertice1, vertice2, vertice3 y vertice4
-(que corresponden a los cuatro vértices del rectángulo).
+18.
 c. La base de todos los rectángulos de esta clase será siempre horizontal. Por lo tanto, debe
 tener un constructor para construir el rectángulo por medio de los vértices 1 y 3 (utilizar el
 método Abs de la clase Math, dicho método retorna el valor absoluto de un número, para
@@ -38,14 +32,14 @@ namespace Geometria
   {
     #region Atributos
 
-    private float lado;
-    private float area;
-    private float perimetro;
+    private float _lado;
+    private float _area;
+    private float _perimetro;
 
-    Punto vertice1;
-    Punto vertice2;
-    Punto vertice3;
-    Punto vertice4;
+    private Punto _vertice1;
+    private Punto _vertice2;
+    private Punto _vertice3;
+    private Punto _vertice4;
 
     #endregion
 
@@ -58,20 +52,38 @@ namespace Geometria
 
     #region Metodos
 
-    private float GetLado()
+    private float Perimetro()
     {
 
     }
 
-    private float GetPerimetro()
+    private float Area()
     {
-
+      float area = getArea();
+      area = 
     }
 
-    private float GetArea()
+    public float GetLado()
     {
-
+      return this._lado;
     }
+    
+    public float getArea()
+    {
+      return this._area;
+    }
+
+    public float getPerimetro()
+    {
+      return this._perimetro;
+    }
+
+    private float Rectangulo( Punto vertice1 , Punto vertice3 )
+    {
+      
+    }
+
+  
 
     #endregion
 
@@ -79,4 +91,4 @@ namespace Geometria
 
   }
 }
-*/
+
