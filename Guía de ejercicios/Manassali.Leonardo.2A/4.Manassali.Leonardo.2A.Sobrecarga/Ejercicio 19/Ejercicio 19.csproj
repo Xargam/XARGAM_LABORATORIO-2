@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83D58F46-C2D1-4318-9616-54F82FFDA90E}</ProjectGuid>
+    <ProjectGuid>{715AE5CE-4059-4D6D-B525-AAEEEC915152}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio_16</RootNamespace>
-    <AssemblyName>Ejercicio 16</AssemblyName>
+    <RootNamespace>Ejercicio_19</RootNamespace>
+    <AssemblyName>Ejercicio 19</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alumno.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sumador.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

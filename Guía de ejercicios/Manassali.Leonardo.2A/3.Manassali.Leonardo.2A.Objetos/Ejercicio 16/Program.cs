@@ -24,6 +24,29 @@ namespace Ejercicio_16
 		public static void Main(string[] args)
 		{
 			Console.Title = "Ejercicio 16";
+
+			Alumno alumno1 = new Alumno();
+			alumno1.apellido = "Varela";
+			alumno1.nombre = "Nancy";
+			alumno1.legajo = 10;
+			alumno1.Estudiar(10, 10);
+			Console.WriteLine(alumno1.Mostrar());
+
+			Alumno alumno2 = new Alumno();
+			alumno2.nombre = "José";
+			alumno2.apellido = "Biscardi";
+			alumno2.legajo = 11;
+			alumno2.Estudiar(1, 2);
+			Console.WriteLine(alumno2.Mostrar());
+
+			Alumno alumno3 = new Alumno();
+			alumno3.nombre = "Juan";
+			alumno3.apellido = "Crusso";
+			alumno3.legajo = 12;
+			alumno3.Estudiar(4, 6);
+			Console.WriteLine(alumno3.Mostrar());
+
+			Console.ReadLine();
 		}
 	}
 }
