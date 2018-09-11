@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,15 +44,19 @@ namespace Ejercicio_22
 		{
 			Console.Title = "Ejercicio 22";
 			NumeroBinario binario = "101.1";
-			NumeroDecimal deci = 5.5;
-			deci += binario;
+      NumeroDecimal decimal2 = 50;
+      NumeroBinario binario2 = "101.1";
+
+      NumeroDecimal deci = 5.5;
+			deci = deci + binario;
 			if( deci != binario )
 			{
 				Console.WriteLine("Son igualitos");
 			}
 
 			Console.WriteLine((double)deci);
-			Console.WriteLine((string)binario);
+
+			//Console.WriteLine((string)binario);
 			Console.ReadLine();
 		}
 	}

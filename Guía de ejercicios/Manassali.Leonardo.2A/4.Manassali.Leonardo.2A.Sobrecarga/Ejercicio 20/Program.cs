@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,11 +32,12 @@ namespace Ejercicio_20
 		{
 			Console.Title = "Ejercicio 20";
 
-			Dolar ahorros = 10;
+      Dolar ahorros = 10;
+      Peso ars = new Peso(400,37);
 			Euro euros = 5;
 
-			Console.WriteLine(ahorros);
-
+      ars += euros + ahorros + ahorros;
+			Console.WriteLine((Dolar)ars);
 			Console.ReadLine();
 
 
