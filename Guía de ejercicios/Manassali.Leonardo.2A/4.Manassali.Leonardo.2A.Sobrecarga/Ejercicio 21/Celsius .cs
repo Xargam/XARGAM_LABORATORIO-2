@@ -54,10 +54,10 @@ namespace Grados
 			return gradosC;
 		}
 
-		public static implicit operator double(Celsius gradosC)
+		/*public static implicit operator double(Celsius gradosC)
 		{
 			return gradosC.GetGrados();
-		}
+		}*/
 
 		#endregion
 
@@ -84,6 +84,7 @@ namespace Grados
 		{
 			return  gradosC + (Fahrenheit)gradosK;
 		}
+
 
 		#endregion
 

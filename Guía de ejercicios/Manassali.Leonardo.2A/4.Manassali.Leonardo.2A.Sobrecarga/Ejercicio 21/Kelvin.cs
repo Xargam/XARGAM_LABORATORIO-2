@@ -53,10 +53,10 @@ namespace Grados
 			return gradosK;
 		}
 
-		public static implicit operator double(Kelvin gradosK)
+		/*public static implicit operator double(Kelvin gradosK)
 		{
 			return gradosK.GetGrados();
-		}
+		}*/
 
 		#endregion
 

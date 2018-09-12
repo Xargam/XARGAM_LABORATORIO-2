@@ -15,9 +15,9 @@ namespace Ejercicio_21
 			Fahrenheit grados = 70;
 			Kelvin grados2 = -550;
 			Celsius grados3 = 100;
-			grados += grados + grados3;
+			grados2 += grados2 + grados3;
 
-			Console.WriteLine(grados);
+			Console.WriteLine(grados.GetGrados());
 			Console.ReadLine();
 		}
 	}
