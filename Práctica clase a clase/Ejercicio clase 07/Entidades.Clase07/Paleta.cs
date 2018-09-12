@@ -23,72 +23,92 @@ namespace Entidades.Clase07
 			this._colores = new Tempera[this._cantMaximaElementos];
 		}
 
-		#endregion
+    #endregion
 
-		#region Sobrecargas
+    #region Sobrecargas
 
-		public static implicit operator Paleta(int colores)
-		{
-			return new Paleta(colores);
-		}
+    #region Conversion
 
-		public static explicit operator string(Paleta paleta)
-		{
-			return paleta.Mostrar();
-		}
+    public static implicit operator Paleta(int colores)
+    {
+      return new Paleta(colores);
+    }
 
-		public static bool operator ==(Paleta paleta, Tempera tempera)
-		{
-			bool verify = false;
+    public static explicit operator string(Paleta paleta)
+    {
+      return paleta.Mostrar();
+    }
 
-			for (int i = 0; i < paleta._colores.Length; i++)
-			{
-				if (paleta._colores.GetValue(i) != null)
-				{
-					if (paleta._colores[i] == tempera)
-					{
-						verify = true;
-					}
-				}
-			}
-			return verify;
-		}
+    #endregion
 
-		public static bool operator !=(Paleta paleta, Tempera tempera)
-		{
-			return !(paleta == tempera);
-		}
+    #region Comparacion
+    public static bool operator ==(Paleta paleta, Tempera tempera)
+    {
+      bool verify = false;
 
+      for (int i = 0; i < paleta._colores.Length; i++)
+      {
+        if (paleta._colores.GetValue(i) != null)
+        {
+          if (paleta._colores[i] == tempera)
+          {
+            verify = true;
+          }
+        }
+      }
+      return verify;
+    }
 
+    public static bool operator !=(Paleta paleta, Tempera tempera)
+    {
+      return !(paleta == tempera);
+    }
 
-		public static Paleta operator +(Paleta paleta, Tempera tempera)
-		{
-			int temperaIndex;
+    #endregion
 
-			if (paleta == tempera)
-			{
-				temperaIndex = paleta.ObtenerIndice(tempera);
-				paleta._colores[temperaIndex] += tempera;
-			}
-			else
-			{
-				temperaIndex = paleta.ObtenerIndice();
-				
-				if (temperaIndex > -1)
-				{
+    #region SumaResta
 
-					paleta._colores[temperaIndex] = tempera;
-				}
+    public static Paleta operator -(Paleta paleta, Tempera tempera)
+    {
+      int temperaIndex = paleta.ObtenerIndice(tempera);
+      sbyte resta = (sbyte)((sbyte)paleta._colores[temperaIndex] - (sbyte)tempera);
+      
+      if ( temperaIndex > -1 )
+      {
+        paleta._colores[temperaIndex] = (resta <= 0 ) ? null : paleta._colores[temperaIndex] + (sbyte)((sbyte)(tempera)*-1);
+      }
+      return paleta;
+    }
 
-			}
-			return paleta;
-		}
+  
+    public static Paleta operator +(Paleta paleta, Tempera tempera)
+    {
+      int temperaIndex;
 
-		#endregion
+      if (paleta == tempera)
+      {
+        temperaIndex = paleta.ObtenerIndice(tempera);
+        paleta._colores[temperaIndex] += tempera;
+      }
+      else
+      {
+        temperaIndex = paleta.ObtenerIndice();
+        if (temperaIndex > -1)
+        {
+          paleta._colores[temperaIndex] = tempera;
+        }
 
-		#region Metodos
+      }
+      return paleta;
+    }
 
-		private string Mostrar()
+    #endregion
+
+    #endregion
+
+    #region Metodos
+
+    private string Mostrar()
 		{
 			string datos = "Cantidad de elementos: " + this._cantMaximaElementos.ToString() +"\n\n";
 			for (int i = 0; i < this._colores.Length; i++)

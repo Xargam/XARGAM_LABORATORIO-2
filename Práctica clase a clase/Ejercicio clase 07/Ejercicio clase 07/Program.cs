@@ -11,18 +11,16 @@ namespace Ejercicio_clase_07
   {
     public static void Main(string[] args)
     {
-
       Console.Title = "Ejercicio clase 07";
       Tempera tempera = new Tempera(10, ConsoleColor.Blue, "Vic ");
+      Tempera tempera4 = new Tempera(7, ConsoleColor.Blue, "Vic ");
       Tempera tempera2 = new Tempera(50, ConsoleColor.Red, "Vic ");
       Tempera tempera3 = new Tempera(50, ConsoleColor.Red, "Vic ");
-      //Console.WriteLine(tempera + tempera2);
-      //tempera = tempera + tempera2;
-      
-      Paleta paleta = 2;
-      paleta += tempera ;
-      paleta += tempera2 + tempera3;
 
+      Paleta paleta = 2;
+      paleta += tempera;
+      paleta -= tempera4;
+      
       Console.WriteLine((string)paleta);
       Console.ReadLine();
     }

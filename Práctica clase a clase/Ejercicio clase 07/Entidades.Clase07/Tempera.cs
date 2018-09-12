@@ -30,6 +30,8 @@ namespace Entidades.Clase07
 
     #region Sobrecargas
 
+    #region Conversion
+
     public static implicit operator string(Tempera tempera)
     {
       return tempera.Mostrar();
@@ -40,8 +42,12 @@ namespace Entidades.Clase07
       return tempera._cantidad;
     }
 
+    #endregion
 
-    public static bool operator ==(Tempera tempera1 , Tempera tempera2 )
+
+    #region Comparacion
+
+    public static bool operator ==(Tempera tempera1, Tempera tempera2)
     {
       return tempera1._color == tempera2._color && tempera1._marca == tempera2._marca;
     }
@@ -51,11 +57,16 @@ namespace Entidades.Clase07
       return !(tempera1 == tempera2);
     }
 
+    #endregion
+
+
+    #region SumaResta
+
     public static Tempera operator +(Tempera tempera1, Tempera tempera2)
     {
       Tempera tempera3 = new Tempera(tempera1._cantidad, tempera1._color, tempera1._marca);
-      
-      if( tempera1 == tempera2 )
+
+      if (tempera1 == tempera2)
       {
         tempera3 += tempera2._cantidad;
       }
@@ -64,9 +75,11 @@ namespace Entidades.Clase07
 
     public static Tempera operator +(Tempera tempera1, sbyte cantidad)
     {
-      Tempera tempera2 = new Tempera( (sbyte)(tempera1._cantidad + cantidad), tempera1._color,tempera1._marca );
+      Tempera tempera2 = new Tempera((sbyte)(tempera1._cantidad + cantidad), tempera1._color, tempera1._marca);
       return tempera2;
     }
+
+    #endregion
 
     #endregion
 
