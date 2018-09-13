@@ -6,7 +6,7 @@ namespace TP_1___Laboratorio_II
     {
         #region AtributosYPropidades
 
-        private double _numero;
+        public double _numero;
         private string SetNumero
         {
             set
@@ -67,7 +67,6 @@ namespace TP_1___Laboratorio_II
 
         /*public static double BinarioDecimal(string binario)
         {
-            
             int indicePunto;
             int exponente;
             double numeroDecimal = 0;
