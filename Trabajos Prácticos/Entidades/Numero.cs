@@ -67,7 +67,7 @@ namespace Entidades
 
         public string BinarioDecimal(string binario)
         {
-            string numero = "0";
+            string numero = (binario.Length == 0)? "Valor invalido" : "0";
             for (int i = 0; i < binario.Length; i++)
             {
                 if (binario[i] != '1' && binario[i] != '0')
