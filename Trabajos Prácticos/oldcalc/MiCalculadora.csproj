@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3FB3F5E5-3011-4A7B-8495-FFEB1C587C6A}</ProjectGuid>
+    <ProjectGuid>{047961A0-3AF9-4F76-87D6-0147AFF7852A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MiCalculadora</RootNamespace>
     <AssemblyName>MiCalculadora</AssemblyName>
@@ -46,16 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LaCalculadora.cs">
+    <Compile Include="MiCalculadora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LaCalculadora.Designer.cs">
-      <DependentUpon>LaCalculadora.cs</DependentUpon>
+    <Compile Include="MiCalculadora.designer.cs">
+      <DependentUpon>MiCalculadora.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LaCalculadora.resx">
-      <DependentUpon>LaCalculadora.cs</DependentUpon>
+    <EmbeddedResource Include="MiCalculadora.resx">
+      <DependentUpon>MiCalculadora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -56,7 +56,7 @@ namespace TP_1___Laboratorio_II
         }
         public static double operator /(Numero n1, Numero n2)
         {
-            return n1._numero / n2._numero;
+            return (n2._numero != 0) ? n1._numero / n2._numero : Double.NaN ;
         }
 
         #endregion
