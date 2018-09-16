@@ -1,7 +1,0 @@
-C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio -01\bin\Debug\Ejercicio -01.exe.config
-C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio -01\bin\Debug\Ejercicio -01.exe
-C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio -01\bin\Debug\Ejercicio -01.pdb
-C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio -01\obj\Debug\Ejercicio -01.csprojAssemblyReference.cache
-C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio -01\obj\Debug\Ejercicio -01.csproj.CoreCompileInputs.cache
-C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio -01\obj\Debug\Ejercicio -01.exe
-C:\Users\Leo\Desktop\Xargam\Manassali.Leonardo.2A\Ejercicio -01\obj\Debug\Ejercicio -01.pdb
