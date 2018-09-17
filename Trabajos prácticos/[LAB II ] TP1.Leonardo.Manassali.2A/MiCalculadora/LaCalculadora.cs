@@ -58,7 +58,11 @@ namespace MiCalculadora
             this.LblResultado.Text = binario;
         }
 
-
+		/// <summary>
+		/// Reestablece los valores en pantalla.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
 			this.Limpiar();

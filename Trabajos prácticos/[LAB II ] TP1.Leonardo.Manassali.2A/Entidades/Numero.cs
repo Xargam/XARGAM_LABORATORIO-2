@@ -190,14 +190,15 @@ namespace Entidades
 					parteEntera = Math.Truncate(parteEntera / 2);
 				}
 				binario += (parteNoEntera > 0) ? "," : "";
-				while(parteNoEntera > 0)
+				//Agrego el signo del numero tomando en cuenta que no sea -0.
+				binario = (numero.Contains("-") && parteEntera + parteNoEntera != 0) ? binario.Insert(0, "-") : binario;
+				while (parteNoEntera > 0)
 				{
 					binario += (parteNoEntera * 2 >= 1) ? "1" : "0";
 					parteNoEntera *= 2;
 					parteNoEntera = (parteNoEntera >= 1) ? parteNoEntera - 1 : parteNoEntera;
 				}
-				//Agrego el signo del numero tomando en cuenta que no sea -0.
-				binario =(numero.Contains("-") && parteEntera+parteNoEntera != 0) ? binario.Insert(0, "-"): binario;
+				
 			}
 			return binario;
 		}

@@ -10,7 +10,7 @@ namespace Entidades
 		/// Verifica que un operador sea de alguna operación básica: (* / + - ) Devuelve "true" en caso de que sea correcto.
 		/// </summary>
 		/// <param name="operador">Varible en formato string con operador a validar.</param>
-		/// <returns>Devuelve "true" en caso de que el operador sea correcto o "+" en caso contrario.</returns>
+		/// <returns></returns>
 		private static string ValidarOperador(string operador)
 		{
 			string verificacion = "true";
