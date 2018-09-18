@@ -22,7 +22,7 @@ namespace Entidades
 		}
 
 		/// <summary>
-		/// Realiza una de las cuatro operaciones básicas entre dos instancias de Numero. En caso de error devuelve NaN.
+		/// Realiza una de las cuatro operaciones básicas entre dos instancias de Numero.
 		/// </summary>
 		/// <param name="num1">Operando uno.<param>
 		/// <param name="num2">Operando dos.</param>
@@ -30,7 +30,7 @@ namespace Entidades
 		/// <returns></returns>
 		public static double Operar(Numero num1, Numero num2, string operador)
 		{
-			double resultado = Double.NaN;
+			double resultado = 0;
 			switch (operador)
 			{
 				case "+":
@@ -46,7 +46,6 @@ namespace Entidades
 					resultado = num1 / num2;
 					break;
 			}
-			resultado = (Double.IsInfinity(resultado)) ? Double.NaN : resultado;
 			return resultado;
 		}
 

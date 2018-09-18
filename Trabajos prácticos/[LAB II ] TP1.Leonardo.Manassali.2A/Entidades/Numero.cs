@@ -4,23 +4,18 @@ namespace Entidades
 {
 	public class Numero
 	{
-		#region Atributos y propidades
+		#region AtributosPropidades
 
 		private double _numero;
 
 		/// <summary>
-		/// Setea un string en el atributo numero previamente validando que sea un número valido. En caso de error
-		/// establece NaN.
+		/// Setea un string en el atributo numero previamente validando que sea un número valido. En caso de error setea 0.
 		/// </summary>
 		private string SetNumero
 		{
 			set
 			{
 				double numero = this.ValidarNumero(value);
-				//Estas lineas verifican que si el numero a setear es -0,-00..,0000..,etc no sea invalidado.
-				value = (value != "-" && value != "" && value.IndexOf('-') < 1)? value.Trim('0') : "ERROR";
-				value = (value == "-" || value == "") ? "OK" : "ERROR";
-				numero = (numero == 0 && value == "ERROR") ? Double.NaN : numero;
 				this._numero = numero;
 			}
 		}
@@ -100,63 +95,48 @@ namespace Entidades
 		/// <returns></returns>
 		public static double operator /(Numero n1, Numero n2)
 		{
-			return (n2._numero != 0) ? n1._numero / n2._numero : Double.NaN;
+			return (n2._numero != 0) ? n1._numero / n2._numero : 0;
 		}
 
 		#endregion
 
 		#region Metodos
 
-		#region Conversion numerica
+		#region Conversion
 
 		/// <summary>
-		/// Convierte un string con un número binario a su equivalente decimal como string. En caso de error o precision requerida excesiva devuelve "Valor invalido".
+		/// Convierte un string con un número binario a su equivalente decimal como string. En caso de error devuelve "Valor invalido".
 		/// </summary>
 		/// <param name="binario">Numero binario a convertir.</param>
 		/// <returns></returns>
 		public string BinarioDecimal(string binario)
 		{
-			string numero;
-			int indiceComa;
-			int exponente;
-			int indiceSigno;
-
-			indiceSigno = binario.IndexOf('-');
-			binario = (indiceSigno == 0) ? binario.Remove(0, 1) : binario;
-			indiceComa = binario.IndexOf(',');
-			//Verifico que la coma tenga índice correcto respecto al punto y la elimino.
-			binario = (indiceComa > 0 && indiceComa > indiceSigno ) ? binario.Remove(indiceComa, 1) : binario;
-			//El exponente para el bit mas significativo será asignado según si el num tiene coma o no.
-			exponente = (indiceComa > -1) ? indiceComa - 1 : binario.Length - 1;
-			//Verifico que el número no este vacío y que contenga a lo sumo 3 decimales.
-			numero = (binario.Length == 0 )? "Valor invalido" : "0";
-			for (int i = 0; i < binario.Length; i++)
+			string numDecimal = "Valor invalido";
+			bool esBinario = true;
+			double numero;
+			foreach( char digito in binario )
 			{
-				if (binario[i] != '1' && binario[i] != '0')
+				if( digito != '1' && digito != '0' && digito != '-' && digito != ',' && digito != '.')
 				{
-					numero = "Valor invalido";
+					esBinario = false;
 					break;
 				}
 			}
-			if (numero != "Valor invalido")
+			if ( Double.TryParse(binario, out numero) && esBinario )
 			{
-				for (int i = 0; i < binario.Length ; i++)
+				numero = 0;
+				//Eliminación de coma y signo y puntos en caso de existir.
+				binario = binario.Replace("-", "");
+				binario = binario.Replace(",", "");
+				binario = binario.Replace(".", "");
+
+				for (int i = 0 ; i < binario.Length; i++)
 				{
-					//Reviso bit a bit el binario, lo sumo, elevo a la potencia de 2 correcta y guardo.
-					numero = (binario.Substring(i, 1) == "1") ? (Double.Parse(numero) + Math.Pow(2, exponente - i)).ToString() : numero;
-					//Si el numero es demasiado grande o pequeño lo descarto.
-					if (Math.Abs(Double.Parse(numero)) > 2147483647)
-					{
-						numero = "Valor invalido";
-						break;
-					}
-					else if (i == binario.Length - 1 && indiceSigno > -1)
-					{
-						numero = (Double.Parse(numero) * -1).ToString();
-					}
+					numero += Double.Parse(binario[i].ToString())*Math.Pow(2, binario.Length -1-i);
 				}
+				numDecimal = numero.ToString();
 			}
-			return numero;
+			return numDecimal;
 		}
 
 		/// <summary>
@@ -177,41 +157,28 @@ namespace Entidades
 		public string DecimalBinario(string numero)
 		{
 			string binario = "Valor invalido";
-			double parteEntera;
-			if (Double.TryParse(numero, out double parteNoEntera) && Math.Abs(parteNoEntera) <= 2147483647)
+			if( Double.TryParse(numero,out double numDecimal) )
 			{
-				parteNoEntera = Math.Abs(parteNoEntera);
-				parteEntera = Math.Truncate(parteNoEntera);
-				parteNoEntera = parteNoEntera - parteEntera;
-				binario = (parteEntera == 0) ? "0" : "1";
-				while (parteEntera > 1)
+				numDecimal = Math.Truncate(Math.Abs(numDecimal));
+				binario = (numDecimal == 0) ? "0" : "";
+				while (numDecimal > 0)
 				{
-					binario = binario.Insert(1, (parteEntera % 2).ToString());
-					parteEntera = Math.Truncate(parteEntera / 2);
+					binario = (Math.Truncate(numDecimal % 2)).ToString() + binario;
+					numDecimal = Math.Truncate(numDecimal / 2);
 				}
-				binario += (parteNoEntera > 0) ? "," : "";
-				//Agrego el signo del numero tomando en cuenta que no sea -0.
-				binario = (numero.Contains("-") && parteEntera + parteNoEntera != 0) ? binario.Insert(0, "-") : binario;
-				while (parteNoEntera > 0)
-				{
-					binario += (parteNoEntera * 2 >= 1) ? "1" : "0";
-					parteNoEntera *= 2;
-					parteNoEntera = (parteNoEntera >= 1) ? parteNoEntera - 1 : parteNoEntera;
-				}
-				
 			}
 			return binario;
 		}
 
 		#endregion
 
+		#region Validacion
+
 		/// <summary>
 		/// Verifica que un numero en formato string pueda ser convertido a un double.
 		/// </summary>
 		/// <param name="numero"></param>
 		/// <returns></returns>
-		#region Validacion
-
 		private double ValidarNumero(string numero)
 		{
 			Double.TryParse(numero, out double verificacion);

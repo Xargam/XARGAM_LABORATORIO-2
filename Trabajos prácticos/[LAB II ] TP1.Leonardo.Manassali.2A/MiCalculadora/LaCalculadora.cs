@@ -73,14 +73,14 @@ namespace MiCalculadora
         }
 
 		/// <summary>
-		/// Realiza la operación solicitada por el usuario o muestra un error en caso de suceder.
+		/// Realiza una aritmética operación solicitada por el usuario.
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		private void BtnOperar_Click(object sender, EventArgs e)
 		{
 			double result = LaCalculadora.Operar(this.TxtNumero1.Text,this.TxtNumero2.Text,this.CmbOperador.Text);
-			this.LblResultado.Text = ( Double.IsNaN(result)) ? "ERROR" : result.ToString();
+			this.LblResultado.Text = result.ToString();
 		}
 	
 		/// <summary>
@@ -95,7 +95,7 @@ namespace MiCalculadora
 		}
 
 		/// <summary>
-		/// Realiza una operación matemática básica según un operador y devuelve el resultado en formato double. En caso de error devuelve NaN.
+		/// Realiza una operación matemática básica según un operador y devuelve el resultado en formato double.
 		/// </summary>
 		/// <param name="numero1">Operando 1.</param>
 		/// <param name="numero2">Operando 2.</param>
