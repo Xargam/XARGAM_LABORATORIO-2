@@ -106,6 +106,9 @@ namespace MiCalculadora
 			return Calculadora.Operar(new Numero(numero1), new Numero(numero2), operador);
 		}
 
-		
+		private void TxtNumero2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

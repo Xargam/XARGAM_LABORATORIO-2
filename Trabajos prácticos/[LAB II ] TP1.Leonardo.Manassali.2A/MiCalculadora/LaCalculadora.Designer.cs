@@ -42,10 +42,10 @@
 			// 
 			// BtnConvertirABinario
 			// 
-			this.BtnConvertirABinario.Location = new System.Drawing.Point(14, 212);
+			this.BtnConvertirABinario.Location = new System.Drawing.Point(14, 209);
 			this.BtnConvertirABinario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.BtnConvertirABinario.Name = "BtnConvertirABinario";
-			this.BtnConvertirABinario.Size = new System.Drawing.Size(231, 56);
+			this.BtnConvertirABinario.Size = new System.Drawing.Size(294, 58);
 			this.BtnConvertirABinario.TabIndex = 0;
 			this.BtnConvertirABinario.Text = "Convertir a Binario";
 			this.BtnConvertirABinario.UseVisualStyleBackColor = true;
@@ -53,10 +53,10 @@
 			// 
 			// BtnCerrar
 			// 
-			this.BtnCerrar.Location = new System.Drawing.Point(14, 160);
+			this.BtnCerrar.Location = new System.Drawing.Point(14, 147);
 			this.BtnCerrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.BtnCerrar.Name = "BtnCerrar";
-			this.BtnCerrar.Size = new System.Drawing.Size(159, 45);
+			this.BtnCerrar.Size = new System.Drawing.Size(231, 45);
 			this.BtnCerrar.TabIndex = 1;
 			this.BtnCerrar.Text = "Cerrar";
 			this.BtnCerrar.UseVisualStyleBackColor = true;
@@ -64,10 +64,10 @@
 			// 
 			// BtnConvertirADecimal
 			// 
-			this.BtnConvertirADecimal.Location = new System.Drawing.Point(275, 212);
+			this.BtnConvertirADecimal.Location = new System.Drawing.Point(318, 209);
 			this.BtnConvertirADecimal.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.BtnConvertirADecimal.Name = "BtnConvertirADecimal";
-			this.BtnConvertirADecimal.Size = new System.Drawing.Size(231, 56);
+			this.BtnConvertirADecimal.Size = new System.Drawing.Size(293, 58);
 			this.BtnConvertirADecimal.TabIndex = 2;
 			this.BtnConvertirADecimal.Text = "Convertir a Decimal";
 			this.BtnConvertirADecimal.UseVisualStyleBackColor = true;
@@ -75,10 +75,10 @@
 			// 
 			// BtnLimpiar
 			// 
-			this.BtnLimpiar.Location = new System.Drawing.Point(181, 160);
+			this.BtnLimpiar.Location = new System.Drawing.Point(254, 147);
 			this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.BtnLimpiar.Name = "BtnLimpiar";
-			this.BtnLimpiar.Size = new System.Drawing.Size(159, 45);
+			this.BtnLimpiar.Size = new System.Drawing.Size(118, 45);
 			this.BtnLimpiar.TabIndex = 3;
 			this.BtnLimpiar.Text = "Limpiar";
 			this.BtnLimpiar.UseVisualStyleBackColor = true;
@@ -86,10 +86,10 @@
 			// 
 			// BtnOperar
 			// 
-			this.BtnOperar.Location = new System.Drawing.Point(348, 160);
+			this.BtnOperar.Location = new System.Drawing.Point(380, 147);
 			this.BtnOperar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.BtnOperar.Name = "BtnOperar";
-			this.BtnOperar.Size = new System.Drawing.Size(159, 45);
+			this.BtnOperar.Size = new System.Drawing.Size(231, 45);
 			this.BtnOperar.TabIndex = 4;
 			this.BtnOperar.Text = "Operar";
 			this.BtnOperar.UseVisualStyleBackColor = true;
@@ -99,10 +99,10 @@
 			// 
 			this.CmbOperador.Font = new System.Drawing.Font("Toledo", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.CmbOperador.FormattingEnabled = true;
-			this.CmbOperador.Location = new System.Drawing.Point(210, 84);
+			this.CmbOperador.Location = new System.Drawing.Point(254, 70);
 			this.CmbOperador.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.CmbOperador.Name = "CmbOperador";
-			this.CmbOperador.Size = new System.Drawing.Size(102, 43);
+			this.CmbOperador.Size = new System.Drawing.Size(118, 43);
 			this.CmbOperador.TabIndex = 5;
 			// 
 			// LblResultado
@@ -110,12 +110,12 @@
 			this.LblResultado.AutoEllipsis = true;
 			this.LblResultado.BackColor = System.Drawing.SystemColors.ControlText;
 			this.LblResultado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.LblResultado.Font = new System.Drawing.Font("Goudy Stout", 15F);
+			this.LblResultado.Font = new System.Drawing.Font("Goudy Stout", 17.5F);
 			this.LblResultado.ForeColor = System.Drawing.Color.WhiteSmoke;
 			this.LblResultado.Location = new System.Drawing.Point(14, 9);
 			this.LblResultado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.LblResultado.Name = "LblResultado";
-			this.LblResultado.Size = new System.Drawing.Size(492, 59);
+			this.LblResultado.Size = new System.Drawing.Size(597, 34);
 			this.LblResultado.TabIndex = 6;
 			this.LblResultado.Text = "0";
 			this.LblResultado.Click += new System.EventHandler(this.LblResultado_Click);
@@ -123,20 +123,21 @@
 			// TxtNumero2
 			// 
 			this.TxtNumero2.Font = new System.Drawing.Font("Toledo", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.TxtNumero2.Location = new System.Drawing.Point(348, 85);
+			this.TxtNumero2.Location = new System.Drawing.Point(380, 70);
 			this.TxtNumero2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.TxtNumero2.Name = "TxtNumero2";
-			this.TxtNumero2.Size = new System.Drawing.Size(158, 45);
+			this.TxtNumero2.Size = new System.Drawing.Size(231, 45);
 			this.TxtNumero2.TabIndex = 7;
 			this.TxtNumero2.Text = "0";
+			this.TxtNumero2.TextChanged += new System.EventHandler(this.TxtNumero2_TextChanged);
 			// 
 			// TxtNumero1
 			// 
 			this.TxtNumero1.Font = new System.Drawing.Font("Toledo", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.TxtNumero1.Location = new System.Drawing.Point(14, 84);
+			this.TxtNumero1.Location = new System.Drawing.Point(14, 70);
 			this.TxtNumero1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
 			this.TxtNumero1.Name = "TxtNumero1";
-			this.TxtNumero1.Size = new System.Drawing.Size(159, 45);
+			this.TxtNumero1.Size = new System.Drawing.Size(231, 45);
 			this.TxtNumero1.TabIndex = 8;
 			this.TxtNumero1.Text = "0";
 			this.TxtNumero1.TextChanged += new System.EventHandler(this.TxtNumero1_TextChanged);
@@ -145,7 +146,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(520, 294);
+			this.ClientSize = new System.Drawing.Size(626, 281);
 			this.Controls.Add(this.TxtNumero1);
 			this.Controls.Add(this.TxtNumero2);
 			this.Controls.Add(this.LblResultado);

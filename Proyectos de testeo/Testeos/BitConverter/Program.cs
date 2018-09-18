@@ -10,6 +10,14 @@ namespace BitConverter
 	{
 		static void Main(string[] args)
 		{
+			string word = "91";
+			string reverse = "";
+			for( int i = word.Length-1; i >= 0; i-- )
+			{
+				reverse += word[i];
+			}
+			Console.WriteLine(reverse);
+			Console.ReadLine();
 		}
 	}
 }
