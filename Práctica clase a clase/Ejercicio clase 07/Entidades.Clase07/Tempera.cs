@@ -8,7 +8,6 @@ namespace Entidades.Clase07
 {
   public class Tempera
   {
-
     #region Atributos
 
     private sbyte _cantidad;
@@ -87,23 +86,12 @@ namespace Entidades.Clase07
 
     private string Mostrar()
     {
-      string datos = "Marca: " + this._marca + '\n';
-      datos += "Color: " + this._color.ToString() + '\n';
-      datos += "Cantidad: " + this._cantidad.ToString() + '\n';
+      string datos = "Marca: " + this._marca;
+      datos += "Color: " + this._color.ToString();
+      datos += "Cantidad: " + this._cantidad.ToString();
       return datos;
     }
 
     #endregion
-
-    /*
-    #region Getters
-
-    private string GetMarca()
-    {
-      return this
-    }
-
-    #endregion
-   */
   }
 }

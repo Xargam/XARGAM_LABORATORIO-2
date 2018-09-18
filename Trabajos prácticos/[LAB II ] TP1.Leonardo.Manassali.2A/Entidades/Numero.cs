@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Entidades
 {
@@ -112,17 +112,9 @@ namespace Entidades
 		public string BinarioDecimal(string binario)
 		{
 			string numDecimal = "Valor invalido";
-			bool esBinario = true;
 			double numero;
-			foreach( char digito in binario )
-			{
-				if( digito != '1' && digito != '0' && digito != '-' && digito != ',' && digito != '.')
-				{
-					esBinario = false;
-					break;
-				}
-			}
-			if ( Double.TryParse(binario, out numero) && esBinario )
+      bool esBinario = true;
+			if ( Double.TryParse(binario, out numero))
 			{
 				numero = 0;
 				//Eliminación de coma y signo y puntos en caso de existir.
@@ -133,7 +125,12 @@ namespace Entidades
 				for (int i = 0 ; i < binario.Length; i++)
 				{
 					numero += Double.Parse(binario[i].ToString())*Math.Pow(2, binario.Length -1-i);
-				}
+          if (binario[i] != '1' && binario[i] != '0')
+          {
+            esBinario = false;
+            break;
+          }
+        }
 				numDecimal = numero.ToString();
 			}
 			return numDecimal;

@@ -9,11 +9,35 @@ namespace Entidades.Clase07
 		private Tempera[] _colores;
 		private int _cantMaximaElementos;
 
-		#endregion
+    #endregion
 
-		#region Constructor
+    #region Indexador
 
-		private Paleta() : this(5)
+    public Tempera this[int indice]
+    {
+      set
+      {
+        if( indice >= 0 && indice < this._cantMaximaElementos )
+        {
+           this._colores[indice] = value;
+        }
+      }
+      get
+      {
+        Tempera tempera = null;
+        if( indice >= 0 && indice < this._cantMaximaElementos )
+        {
+          tempera = this._colores[indice];
+        }
+        return tempera;
+      }
+    }
+
+    #endregion
+
+    #region Constructor
+
+    private Paleta() : this(5)
 		{
 		}
 
@@ -110,12 +134,12 @@ namespace Entidades.Clase07
 
     private string Mostrar()
 		{
-			string datos = "Cantidad de elementos: " + this._cantMaximaElementos.ToString() +"\n\n";
+			string datos = "Cantidad de elementos: " + this._cantMaximaElementos.ToString() +"\r\n";
 			for (int i = 0; i < this._colores.Length; i++)
 			{
 				if (this._colores.GetValue(i) != null)
 				{
-					datos += this._colores[i] + '\n';
+					datos += this._colores[i] + "\r\n";
 				}
 			}
 			return datos;

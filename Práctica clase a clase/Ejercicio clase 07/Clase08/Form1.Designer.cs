@@ -43,10 +43,11 @@ namespace Clase08
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 19);
+            this.textBox1.Location = new System.Drawing.Point(18, 58);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 109);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(437, 109);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -62,25 +63,26 @@ namespace Clase08
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(202, 134);
+            this.button2.Location = new System.Drawing.Point(368, 134);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Location = new System.Drawing.Point(12, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 163);
+            this.groupBox1.Size = new System.Drawing.Size(449, 163);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Paleta de colores";
             this.groupBox1.Visible = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // menuStrip1
             // 
@@ -88,7 +90,7 @@ namespace Clase08
             this.inicioToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(311, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(473, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -116,7 +118,8 @@ namespace Clase08
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 228);
+            this.ClientSize = new System.Drawing.Size(473, 228);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -124,7 +127,6 @@ namespace Clase08
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
