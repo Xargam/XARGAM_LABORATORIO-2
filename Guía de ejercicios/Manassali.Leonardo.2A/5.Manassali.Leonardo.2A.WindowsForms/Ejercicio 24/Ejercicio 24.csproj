@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B93DB360-7585-47AC-B416-DE4EE83C951F}</ProjectGuid>
+    <ProjectGuid>{BC045C71-B581-4A17-8E8E-2AA4E2A40F88}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ejercicio_23</RootNamespace>
-    <AssemblyName>Ejercicio 23</AssemblyName>
+    <RootNamespace>Ejercicio_24</RootNamespace>
+    <AssemblyName>Ejercicio 24</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -80,9 +80,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Moneda\Moneda.csproj">
-      <Project>{de2ca52e-e85e-4b88-be74-09eee518e925}</Project>
-      <Name>Moneda</Name>
+    <ProjectReference Include="..\Grados.cs\Grados.cs.csproj">
+      <Project>{c52d8679-8128-47fe-9741-14a5a8e7f581}</Project>
+      <Name>Grados.cs</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
