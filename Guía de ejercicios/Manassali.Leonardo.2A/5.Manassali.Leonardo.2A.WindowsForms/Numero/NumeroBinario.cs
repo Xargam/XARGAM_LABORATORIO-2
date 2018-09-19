@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Numero;
 
-namespace Numero
+namespace Numeros
 {
 	public class NumeroBinario
 	{
@@ -35,8 +35,7 @@ namespace Numero
 
 		public static implicit operator NumeroBinario(string binario)
 		{
-			NumeroBinario numeroBinario = new NumeroBinario(binario);
-			return numeroBinario;
+			return new NumeroBinario(binario);
 		}
 
 		#endregion
@@ -45,13 +44,11 @@ namespace Numero
 
 		public static string operator +(NumeroBinario binario, NumeroDecimal numDecimal)
 		{
-			string resultado = Convert.ToString(  (double)numDecimal + Conversor.BinarioDecimal( (string)binario ));
-			return resultado;
+			return Conversor.DecimalBinario(Conversor.BinarioDecimal((string)binario) + (double)numDecimal);
 		}
 		public static string operator -(NumeroBinario binario, NumeroDecimal numDecimal)
 		{
-			string resultado = Convert.ToString((double)numDecimal - Conversor.BinarioDecimal((string)binario));
-			return resultado;
+			return binario + (NumeroDecimal)((double)numDecimal * -1);
 		}
 		public static bool operator ==(NumeroBinario binario, NumeroDecimal numDecimal)
 		{

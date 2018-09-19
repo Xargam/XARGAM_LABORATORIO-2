@@ -20,17 +20,12 @@ namespace Ejercicio_25
 
 		private void btnBinarioDecimalbtnBinarioDecimal_Click(object sender, EventArgs e)
 		{
-			this.txtDecimal.Text = (Conversor.BinarioDecimal(this.txtBinarioDecimal.Text)).ToString();
+			this.txtDecimal.Text = Conversor.BinarioDecimal(this.txtBinarioDecimal.Text).ToString();
 		}
 
 		private void btnDecimalBinario_Click(object sender, EventArgs e)
 		{
-			double numeroDecimal;
-			if( Double.TryParse(this.txtDecimalBinario.Text,out numeroDecimal ))
-			{
-				this.txtBinario.Text = Conversor.DecimalBinario(numeroDecimal).ToString();
-			}
-			
+			this.txtBinario.Text = Conversor.DecimalBinario(this.txtDecimalBinario.Text);
 		}
 
 		private void txtBinario_TextChanged(object sender, EventArgs e)

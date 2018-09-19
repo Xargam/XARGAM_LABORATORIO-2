@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Numeros;
+using System;
 
 /*
 22. Tomando la clase Conversor del ejercicio 13, se pide:
@@ -43,18 +39,11 @@ namespace Ejercicio_22
 		public static void Main(string[] args)
 		{
 			Console.Title = "Ejercicio 22";
-			NumeroBinario binario = "101.1";
-      NumeroDecimal decimal2 = 50;
-      NumeroBinario binario2 = "101.1";
-
-      NumeroDecimal deci = 5.5;
-			deci = deci + binario;
-			if( deci != binario )
-			{
-				Console.WriteLine("Son igualitos");
-			}
-
-			Console.WriteLine((double)deci);
+			NumeroBinario binario = "1111";
+			NumeroDecimal decimal2 = 15;
+			NumeroBinario binario2 = "101,1";
+			 binario -= decimal2;
+			Console.WriteLine((string)binario);
 
 			//Console.WriteLine((string)binario);
 			Console.ReadLine();

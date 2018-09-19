@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Numeros;
+using Numero;
 
 namespace Numeros
 {
@@ -35,8 +35,7 @@ namespace Numeros
 
 		public static implicit operator NumeroBinario(string binario)
 		{
-			NumeroBinario numeroBinario = new NumeroBinario(binario);
-			return numeroBinario;
+			return new NumeroBinario(binario);
 		}
 
 		#endregion
@@ -45,13 +44,11 @@ namespace Numeros
 
 		public static string operator +(NumeroBinario binario, NumeroDecimal numDecimal)
 		{
-			string resultado = Convert.ToString(  (double)numDecimal + Conversor.BinarioDecimal( (string)binario ));
-			return resultado;
+			return Conversor.DecimalBinario(Conversor.BinarioDecimal((string)binario) + (double)numDecimal);
 		}
 		public static string operator -(NumeroBinario binario, NumeroDecimal numDecimal)
 		{
-			string resultado = Convert.ToString((double)numDecimal - Conversor.BinarioDecimal((string)binario));
-			return resultado;
+			return binario + (NumeroDecimal)((double)numDecimal * -1);
 		}
 		public static bool operator ==(NumeroBinario binario, NumeroDecimal numDecimal)
 		{

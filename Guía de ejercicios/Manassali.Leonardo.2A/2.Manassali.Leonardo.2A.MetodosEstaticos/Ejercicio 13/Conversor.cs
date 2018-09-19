@@ -10,67 +10,38 @@ namespace Ejercicio_13
 {
 	public class Conversor
 	{
-		public static string DecimalBinario(double numero)
-		{
-			string binario = "";
-			long parteEntera = (long)Math.Abs(numero);
-			double parteDecimal = Math.Abs(numero) - parteEntera;
-
-			binario += (parteEntera == 0) ? '0' : '1';
-			while (parteEntera > 1)
-			{
-				binario = binario.Insert(1, Convert.ToString(parteEntera % 2));
-				parteEntera = parteEntera / 2;
-			}
-
-			binario = (parteDecimal == 0) ? binario : binario + ',';
-			while (parteDecimal > 0)
-			{
-				parteDecimal *= 2;
-				binario += (parteDecimal >= 1) ? '1' : '0';
-				parteDecimal = (parteDecimal >= 1) ? parteDecimal - 1 : parteDecimal;
-			}
-			if (numero < 0)
-			{
-				binario = binario.Insert(0, "-");
-			}
-
-			return binario;
-		}
-
-		public static string DecimalBinario(string numero)
-		{
-
-			DecimalBinario(numero.ToString());
-		}
-
 		public static double BinarioDecimal(string binario)
 		{
-			int indicePunto;
-			int exponente;
-			double numeroDecimal = 0;
-			bool negativo = false;
-
-			negativo = binario.StartsWith("-");
-			binario = (negativo == true) ? binario.Remove(0, 1) : binario;
-			indicePunto = binario.IndexOf(',');
-			indicePunto = (indicePunto == -1) ? binario.IndexOf('.') : indicePunto;
-			indicePunto = (indicePunto == -1) ? binario.Length : indicePunto;
-			binario = (indicePunto < binario.Length) ? binario.Remove(indicePunto, 1) : binario;
-			exponente = (indicePunto == -1) ? binario.Length - 1 : indicePunto - 1;
-
-			for (int indice = 0; indice < binario.Length; exponente--, indice++)
+			double numDecimal = Double.NaN;
+			if (Double.TryParse(binario, out numDecimal) && binario.Trim('1', '0', ',', '.', '-') == "" && Math.Abs(numDecimal) <= 1111111111111111111111111111111111111111111111111.0)
 			{
-				if (binario.Substring(indice, 1) == "1")
+				numDecimal = 0;
+				//Eliminación de parte no entera, coma, signo y puntos en caso de existir.
+				binario = binario.Replace("-", "");
+				binario = binario.Replace(".", "");
+				binario = (binario.IndexOf(',') > -1) ? binario.Remove(binario.IndexOf(',')) : binario;
+				for (int i = 0; i < binario.Length; i++)
 				{
-					numeroDecimal += Math.Pow(2, exponente);
+					numDecimal += Double.Parse(binario[i].ToString()) * Math.Pow(2, binario.Length - 1 - i);
 				}
 			}
-			if (negativo == true)
+			return numDecimal;
+		}
+
+		public static string DecimalBinario(double numero)
+		{
+			string binario = "Valor invalido";
+
+			if ((numero = Math.Truncate(Math.Abs(numero))) < 536870912)
 			{
-				numeroDecimal *= -1;
+				binario = (numero == 0) ? "0" : "";
+				while (numero > 0)
+				{
+					binario = Math.Truncate(numero % 2).ToString() + binario;
+					numero = Math.Truncate(numero / 2);
+				}
 			}
-			return numeroDecimal;
+			return binario;
 		}
 	}
 }
