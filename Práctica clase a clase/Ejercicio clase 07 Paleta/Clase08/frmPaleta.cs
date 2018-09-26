@@ -6,7 +6,7 @@ namespace Clase08
 {
 	public partial class FrmPaleta : Form
 	{
-		private Entidades.Clase07.Paleta _paleta;
+		private Entidades.Clase07.PaletaColeccion _paleta;
 
 		public FrmPaleta()
 		{
