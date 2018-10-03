@@ -13,11 +13,18 @@ namespace Clase08
 			InitializeComponent();
 			this._paleta = 5;
 			this.grpColores.Text = "Paleta de colores";
+			this.comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+			this.comboBox1.Items.Add("Por color (A-Z)");
+			this.comboBox1.Items.Add("Por marca (A-Z)");
+			this.comboBox1.Items.Add("Por cantidad (Ascendente)");
+			this.comboBox1.Items.Add("Por cantidad (Descendente)");
+			this.comboBox1.SelectedItem = "Por marca (A-Z)";
 			this.txtColores.Multiline = true;
 			this.grpColores.Visible = false;
 			this.txtColores.Visible = false;
 			this.btnMas.Text = "+";
 			this.btnMenos.Text = "-";
+
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -49,11 +56,6 @@ namespace Clase08
 
 		}
 
-		private void groupBox1_Enter(object sender, EventArgs e)
-		{
-
-		}
-
 		private void btnMenos_Click(object sender, EventArgs e)
 		{
 			string seleccionado = this.txtColores.SelectedText;
@@ -66,20 +68,39 @@ namespace Clase08
 				{
 					if (frmTempera.ShowDialog() == DialogResult.OK)
 					{
-						if (this._paleta[indice] == frmTempera.Tempera)
-						{
-							this._paleta[indice] += (sbyte)((-1)*((sbyte)frmTempera.Tempera));
-						}
-						else
-						{
-							this._paleta[indice] = null;
-						}
-						this.txtColores.Clear();
+						this._paleta -= frmTempera.Tempera;
 						this.txtColores.Text = (string)this._paleta;
 						break;
 					}
 				}
 				indice++;
+			}
+		}
+
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnOrdenar_Click(object sender, EventArgs e)
+		{
+			switch(this.comboBox1.SelectedItem)
+			{
+				case "Por color (A-Z)":
+					for (int i = 0; i < 4; i++)
+					{
+						for (int j = 0; j < 5; j++)
+						{
+							if( string.Compare(this._paleta[j],,true) this._paleta[j] )
+						}
+					}
+					break;
+				case "Por marca (A-Z)":
+					break;
+				case "Por cantidad (Ascendente)"):
+					break;
+				case "Por cantidad (Descendente)":
+					break;
 			}
 		}
 	}

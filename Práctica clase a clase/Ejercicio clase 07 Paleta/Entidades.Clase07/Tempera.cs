@@ -88,7 +88,7 @@ namespace Entidades.Clase07
     {
       string datos = "Marca: " + this._marca + "   ";
       datos += "Color: " + this._color.ToString() + "   ";
-      datos += "Cantidad: " + this._cantidad.ToString() + "   ";
+      datos += "Cantidad: " + this._cantidad.ToString();
       return datos;
     }
 
