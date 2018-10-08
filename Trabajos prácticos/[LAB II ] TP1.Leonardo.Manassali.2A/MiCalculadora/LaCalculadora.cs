@@ -12,12 +12,12 @@ namespace MiCalculadora
         public LaCalculadora()
         {
             InitializeComponent();
-            this.CmbOperador.Items.Add("+");
-            this.CmbOperador.Items.Add("-");
-            this.CmbOperador.Items.Add("/");
-            this.CmbOperador.Items.Add("*");
-            this.CmbOperador.SelectedItem = "+";
-            this.CmbOperador.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.cmbOperador.Items.Add("+");
+            this.cmbOperador.Items.Add("-");
+            this.cmbOperador.Items.Add("/");
+            this.cmbOperador.Items.Add("*");
+            this.cmbOperador.SelectedItem = "+";
+            this.cmbOperador.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
 		/// <summary>
@@ -37,13 +37,8 @@ namespace MiCalculadora
 		/// <param name="e"></param>
         private void BtnConvertirABinario_Click(object sender, EventArgs e)
         {
-            Numero numero = new Numero();
-            string binario = numero.DecimalBinario(this.TxtNumero1.Text);
-            this.LblResultado.Text = binario;
-        }
-
-        private void LblResultado_Click(object sender, EventArgs e)
-        {
+			Numero numero = new Numero();
+			this.lblResultado.Text = numero.DecimalBinario(this.lblResultado.Text);
         }
 
 		/// <summary>
@@ -53,10 +48,9 @@ namespace MiCalculadora
 		/// <param name="e"></param>
         private void BtnConvertirADecimal_Click(object sender, EventArgs e)
         {
-            Numero numero = new Numero();
-            string binario = numero.BinarioDecimal(this.TxtNumero2.Text);
-            this.LblResultado.Text = binario;
-        }
+			Numero numero = new Numero();
+			this.lblResultado.Text = numero.BinarioDecimal(this.lblResultado.Text);
+		}
 
 		/// <summary>
 		/// Reestablece los valores en pantalla.
@@ -68,10 +62,6 @@ namespace MiCalculadora
 			this.Limpiar();
         }
 
-        private void TxtNumero1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
 		/// <summary>
 		/// Realiza una aritmética operación solicitada por el usuario.
 		/// </summary>
@@ -79,8 +69,8 @@ namespace MiCalculadora
 		/// <param name="e"></param>
 		private void BtnOperar_Click(object sender, EventArgs e)
 		{
-			double result = LaCalculadora.Operar(this.TxtNumero1.Text,this.TxtNumero2.Text,this.CmbOperador.Text);
-			this.LblResultado.Text = result.ToString();
+			double result = LaCalculadora.Operar(this.txtNumero1.Text,this.txtNumero2.Text,this.cmbOperador.Text);
+			this.lblResultado.Text = (Double.IsInfinity(result))? "ERROR" : result.ToString();
 		}
 	
 		/// <summary>
@@ -88,10 +78,10 @@ namespace MiCalculadora
 		/// </summary>
 		private void Limpiar()
 		{
-			this.TxtNumero1.Text = "0";
-			this.TxtNumero2.Text = "0";
-			this.LblResultado.Text = "0";
-			this.CmbOperador.SelectedItem = "+";
+			this.txtNumero1.Text = "0";
+			this.txtNumero2.Text = "0";
+			this.lblResultado.Text = "0";
+			this.cmbOperador.SelectedItem = "+";
 		}
 
 		/// <summary>
@@ -104,11 +94,6 @@ namespace MiCalculadora
 		private static double Operar( string numero1 , string numero2 , string operador )
 		{
 			return Calculadora.Operar(new Numero(numero1), new Numero(numero2), operador);
-		}
-
-		private void TxtNumero2_TextChanged(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

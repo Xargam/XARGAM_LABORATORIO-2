@@ -4,9 +4,13 @@ namespace Entidades
 {
 	public class Numero
 	{
-		#region AtributosPropidades
+		#region Atributos
 
-		private double _numero;
+		private double numero;
+
+		#endregion
+
+		#region Propiedades
 
 		/// <summary>
 		/// Setea un string en el atributo numero previamente validando que sea un número valido. En caso de error setea 0.
@@ -15,10 +19,9 @@ namespace Entidades
 		{
 			set
 			{
-				double numero = this.ValidarNumero(value);
-				this._numero = numero;
+				this.numero = this.ValidarNumero(value);
 			}
-		}
+		} 
 
 		#endregion
 
@@ -29,11 +32,11 @@ namespace Entidades
 		/// </summary>
 		public Numero()
 		{
-			this._numero = 0;
+			this.numero = 0;
 		}
 
 		/// <summary>
-		/// Inicializa el atributo numero con un valor instanciado como double.
+		/// Inicializa el atributo numero con un valor en formato double.
 		/// </summary>
 		/// <param name="numero">Numero en formato double</param>
 		public Numero(double numero) : this(numero.ToString())
@@ -41,7 +44,7 @@ namespace Entidades
 		}
 
 		/// <summary>
-		/// Inicializa el atributo numero con un valor instanciado como string.
+		/// Inicializa el atributo numero con un valor en formato string.
 		/// </summary>
 		/// <param name="strNumero">Numero en formato string.</param>
 		public Numero(string strNumero)
@@ -62,7 +65,7 @@ namespace Entidades
 
 		public static double operator +(Numero n1, Numero n2)
 		{
-			return n1._numero + n2._numero;
+			return (n1.numero + n2.numero);
 		}
 
 		/// <summary>
@@ -73,7 +76,7 @@ namespace Entidades
 		/// <returns></returns>
 		public static double operator -(Numero n1, Numero n2)
 		{
-			return n1._numero - n2._numero;
+			return (n1.numero - n2.numero);
 		}
 
 		/// <summary>
@@ -84,7 +87,7 @@ namespace Entidades
 		/// <returns></returns>
 		public static double operator *(Numero n1, Numero n2)
 		{
-			return n1._numero * n2._numero;
+			return (n1.numero * n2.numero);
 		}
 
 		/// <summary>
@@ -95,7 +98,7 @@ namespace Entidades
 		/// <returns></returns>
 		public static double operator /(Numero n1, Numero n2)
 		{
-			return (n2._numero != 0) ? n1._numero / n2._numero : 0;
+			return (n1.numero / n2.numero);
 		}
 
 		#endregion
@@ -114,16 +117,15 @@ namespace Entidades
 			string numDecimal = "Valor invalido";
 			double numero;
 			//Valida que sea un número, que sea y binario y que no sea demasiado extenso...
-			if ( Double.TryParse(binario, out numero) && binario.Trim('1','0',',','.','-') == "" && Math.Abs(numero) <= 1111111111111111111111111111111111111111111111111.0 )
+			if ( Double.TryParse(binario,out numero ) && binario.Trim('1','0',',','.','-') == "" && numero.ToString().Length < 18 )
 			{
 				numero = 0;
-				//Eliminación de parte no entera, coma, signo y puntos en caso de existir.
 				binario = binario.Replace("-", "");
 				binario = binario.Replace(".", "");
-				binario = (binario.IndexOf(',') > -1)? binario.Remove(binario.IndexOf(',')) : binario ;
-				for (int i = 0 ; i < binario.Length; i++)
+				binario = (binario.IndexOf(',') > -1)? binario.Remove(binario.IndexOf(',')) : binario;
+				for (int i = 0 ; i < binario.Length ; i++)
 				{
-					numero += Double.Parse(binario[i].ToString())*Math.Pow(2, binario.Length -1-i);
+					numero += Double.Parse(binario[i].ToString()) * Math.Pow(2, binario.Length - 1 - i);
 				}
 				numDecimal = numero.ToString();
 			}
@@ -155,7 +157,7 @@ namespace Entidades
 					binario = (numDecimal == 0) ? "0" : "";
 					while (numDecimal > 0)
 					{
-						binario = (Math.Truncate(numDecimal % 2)).ToString() + binario;
+						binario = (numDecimal % 2).ToString() + binario;
 						numDecimal = Math.Truncate(numDecimal / 2);
 					}
 				}

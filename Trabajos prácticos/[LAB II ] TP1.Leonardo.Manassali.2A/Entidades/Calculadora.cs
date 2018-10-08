@@ -44,6 +44,7 @@ namespace Entidades
 					break;
 				case "/":
 					resultado = num1 / num2;
+					resultado = (Double.IsNaN(resultado) || Double.IsInfinity(resultado)) ? Double.MinValue : resultado;
 					break;
 			}
 			return resultado;
