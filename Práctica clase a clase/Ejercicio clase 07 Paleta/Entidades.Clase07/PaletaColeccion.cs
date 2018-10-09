@@ -16,7 +16,6 @@ namespace Entidades.Clase07
 
 		public Tempera this[int indice]
 		{
-
 			set
 			{
 				if (indice >= 0 && indice < this._cantMaximaElementos)
@@ -81,6 +80,7 @@ namespace Entidades.Clase07
 					if (PaletaColeccion._colores[i] == tempera)
 					{
 						verify = true;
+						break;
 					}
 				}
 
@@ -111,7 +111,7 @@ namespace Entidades.Clase07
 				}
 				else
 				{
-					PaletaColeccion._colores.Remove(PaletaColeccion._colores[index]);
+					PaletaColeccion._colores.RemoveAt(index);
 				}
 			}
 			return PaletaColeccion;

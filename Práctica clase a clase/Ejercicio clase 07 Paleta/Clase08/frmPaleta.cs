@@ -1,5 +1,7 @@
 using Entidades.Clase07;
 using System;
+using System.Text;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Clase08
@@ -84,20 +86,35 @@ namespace Clase08
 
 		private void btnOrdenar_Click(object sender, EventArgs e)
 		{
+			StringBuilder sb = new StringBuilder();
+			string[] lineas = this.txtColores.Lines;
+
+			List<string> marcas = new List<string>();
+			List<string> colores = new List<string>();
+			List<sbyte> cantidades = new List<sbyte>();
+
+			
+			for (int i = 0; i < lineas.Length; i++)
+			{
+				if(i > 0)
+				{
+					
+					/*
+					cantidades.Add(0);
+
+					sb.AppendLine(lineas[i]);
+					sb.AppendFormat("Marca: {0}   Color: {1}   Cantidad: {2}", marcas[i-1], colores[i-1], cantidades[i-1]);
+					sb.Clear();*/
+				}
+			}
 			switch(this.comboBox1.SelectedItem)
 			{
 				case "Por color (A-Z)":
-					for (int i = 0; i < 4; i++)
-					{
-						for (int j = 0; j < 5; j++)
-						{
-							if( string.Compare(this._paleta[j],,true) this._paleta[j] )
-						}
-					}
+					this.comboBox1.Text = marcas[0];
 					break;
 				case "Por marca (A-Z)":
 					break;
-				case "Por cantidad (Ascendente)"):
+				case "Por cantidad (Ascendente)":
 					break;
 				case "Por cantidad (Descendente)":
 					break;

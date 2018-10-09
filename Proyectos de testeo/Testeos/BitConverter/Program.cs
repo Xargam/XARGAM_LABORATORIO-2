@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BitConverter
 {
-	class Program
+	internal class Program
 	{
-		static void Main(string[] args)
+		private static void Main(string[] args)
 		{
-			string word = "91";
-			string reverse = "";
-			for( int i = word.Length-1; i >= 0; i-- )
+			string pattern = "Marca:\\s|Color:\\s|Cantidad:\\s|\\s\\s\\s{1}";
+			string[] array = System.Text.RegularExpressions.Regex.
+			foreach (string pal in array)
 			{
-				reverse += word[i];
+				Console.WriteLine(pal);
 			}
-			Console.WriteLine(reverse);
+			
 			Console.ReadLine();
 		}
 	}
