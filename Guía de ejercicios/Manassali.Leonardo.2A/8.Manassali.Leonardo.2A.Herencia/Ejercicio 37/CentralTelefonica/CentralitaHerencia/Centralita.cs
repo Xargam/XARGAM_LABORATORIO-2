@@ -55,8 +55,51 @@ namespace CentralitaHerencia
 		}
 		#endregion
 
+		#region Operadores
+
+		#region Aritmetica
+		public static Centralita operator +(Centralita c , Llamada nuevaLlamada)
+		{
+			if( c != nuevaLlamada)
+			{
+				c.AgregarLlamada(nuevaLlamada);
+			}
+			return c;
+		}
+		#endregion
+
+		#region Comparacion
+		public static bool operator ==(Centralita c, Llamada llamada)
+		{
+			bool verificacion = false;
+			foreach (Llamada item in c.Llamadas)
+			{
+				if (item == llamada)
+				{
+					verificacion = true;
+					break;
+				}
+			}
+			return verificacion;
+		}
+		public static bool operator !=(Centralita c, Llamada llamada)
+		{
+			return !(c == llamada);
+		} 
+		#endregion
+
+		#endregion
+
 		#region Metodos
-		public string Mostrar()
+		private void AgregarLlamada(Llamada nuevaLlamada)
+		{
+			this.Llamadas.Add(nuevaLlamada);
+		}
+		public override string ToString()
+		{
+			return this.Mostrar();
+		}
+		private string Mostrar()
 		{
 			StringBuilder datos = new StringBuilder();
 			datos.AppendFormat("Razon social: {0}\n", this._razonSocial);
@@ -65,14 +108,7 @@ namespace CentralitaHerencia
 			datos.AppendFormat("Ganancia provinciales: {0}\n\n", this.GananciasPorProvincial);
 			foreach (Llamada item in this.Llamadas)
 			{
-				if(item is Local)
-				{
-					datos.AppendLine( ((Local)item).Mostrar());
-				}
-				else if( item is Provincial)
-				{
-					datos.AppendLine(((Provincial)item).Mostrar());
-				}
+				datos.AppendLine(item.ToString());
 			}
 			return datos.ToString();
 		}
@@ -90,11 +126,11 @@ namespace CentralitaHerencia
 			{
 				if( item is Local)
 				{
-					precioLocalTotal += ((Local)item).CostoLlamada;
+					precioLocalTotal += item.CostoLlamada;
 				}
 				else if( item is Provincial )
 				{
-					precioProvincialTotal += ((Provincial)item).CostoLlamada;
+					precioProvincialTotal += item.CostoLlamada;
 				}
 			}
 

@@ -13,7 +13,7 @@ namespace CentralitaHerencia
 		#endregion
 
 		#region Propiedades
-		public float CostoLlamada
+		public override float CostoLlamada
 		{
 			get
 			{
@@ -23,17 +23,25 @@ namespace CentralitaHerencia
 		#endregion
 
 		#region Constructor
-		public Local(Llamada llamada , float costo) : base(llamada.Duracion, llamada.NroDestino , llamada.NroOrigen)
+		public Local(Llamada llamada , float costo) : this(llamada.NroOrigen, llamada.Duracion , llamada.NroDestino,costo)
+		{
+		}
+		public Local(string origen, float duracion, string destino, float costo) : base(duracion,destino,origen)
 		{
 			this._costo = costo;
-		}
-		public Local(string origen, float duracion, string destino, float costo) : this( new Llamada(duracion,destino,origen), costo )
-		{
 		}
 		#endregion
 
 		#region Metodos
-		public new string Mostrar()
+		public override bool Equals(object obj)
+		{
+			return obj is Local;
+		}
+		public override string ToString()
+		{
+			return this.Mostrar();
+		}
+		protected override string Mostrar()
 		{
 			StringBuilder datos = new StringBuilder();
 			datos.AppendLine(base.Mostrar());
