@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{777D8F29-8034-46B1-86CC-0D9838B21EF6}</ProjectGuid>
+    <ProjectGuid>{DC72D283-656F-4B91-9F68-E734E11A4E8F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Ejercicio_27</RootNamespace>
     <AssemblyName>Ejercicio 27</AssemblyName>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EOrden.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
