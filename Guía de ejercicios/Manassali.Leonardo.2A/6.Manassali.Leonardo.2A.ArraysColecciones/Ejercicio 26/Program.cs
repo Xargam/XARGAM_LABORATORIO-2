@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +18,6 @@ namespace Ejercicio_26
 		static void Main(string[] args)
 		{
 			int[] vector = new int[20];
-			int aux;
 			Random numAleatorio = new Random();
 
 			Console.Title = "Ejercicio 26";
@@ -30,34 +29,12 @@ namespace Ejercicio_26
 			Program.MostrarVector(vector);
 
 			Console.WriteLine("Ordenamiento decreciente de los positivos:");
-			for (int i = 0; i < vector.Length-1 ; i++)
-			{
-				for(int j = i+1; j < vector.Length; j++ )
-				{
-					if( vector[i] < vector[j] && vector[j] > 0)
-					{
-						aux = vector[i];
-						vector[i] = vector[j];
-						vector[j] = aux;
-					}
-				}
-			}
-			Program.MostrarVector(vector);
+      Array.Sort(vector, Program.OrdenarListaPositivos);
+      Array.Reverse(vector);
+      Program.MostrarVector(vector);
 
 			Console.WriteLine("Ordenamiento creciente de los negativos:");
-			for (int i = 0; i < vector.Length-1; i++)
-			{
-				for (int j = i + 1; j < vector.Length; j++)
-				{
-					if (vector[i] > vector[j] && vector[j] < 0)
-					{
-						aux = vector[i];
-						vector[i] = vector[j];
-						vector[j] = aux;
-					}
-				}
-				
-			}
+      Array.Sort(vector, Program.OrdenarListaNegativos);
 			Program.MostrarVector(vector);
 			Console.ReadLine();
 
@@ -70,5 +47,35 @@ namespace Ejercicio_26
 				Console.WriteLine(item);
 			}
 		}
-	}
+
+
+    private static int OrdenarListaPositivos(int entero1, int entero2)
+    {
+      int retorno = 0;
+      if (entero1 > entero2 && entero1 > 0)
+      {
+        retorno = 1;
+      }
+      else if (entero2 > entero1 && entero2 > 0)
+      {
+        retorno = -1;
+      }
+      return retorno;
+    }
+
+    private static int OrdenarListaNegativos(int entero1, int entero2)
+    {
+      int retorno = 0;
+      if (entero1 < entero2 && entero1 < 0)
+      {
+        retorno = -1;
+      }
+      else if (entero2 < entero1 && entero2 < 0)
+      {
+        retorno = 1;
+      }
+      return retorno;
+    }
+
+  }
 }
