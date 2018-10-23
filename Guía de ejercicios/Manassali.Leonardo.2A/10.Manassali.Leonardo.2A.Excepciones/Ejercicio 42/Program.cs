@@ -27,7 +27,7 @@ namespace Ejercicio_42
       }
       catch(Exception e)
       {
-        Console.WriteLine("Mensaje de MiExcepcion: {0}",e.Message);
+        Console.WriteLine("Mensajes de error: {0}",e.Message);
       }
       finally
       {

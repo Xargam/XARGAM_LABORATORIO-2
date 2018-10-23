@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio_41
+namespace CentralitaHerencia
 {
   public class CentralitaException : Exception
   {
@@ -33,9 +33,8 @@ namespace Ejercicio_41
     #region Constructor
     public CentralitaException(string mensaje, string clase, string metodo) : this(mensaje, clase , metodo , null )
     {
-
     }
-    public CentralitaException(string mensaje, string clase, string metodo, Exception innerException)
+    public CentralitaException(string mensaje, string clase, string metodo, Exception innerException) : base(mensaje,innerException)
     {
       this._nombreClase = clase;
       this._nombreMetodo = metodo;
