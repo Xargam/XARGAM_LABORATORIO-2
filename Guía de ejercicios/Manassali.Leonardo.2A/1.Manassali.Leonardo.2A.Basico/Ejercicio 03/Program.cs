@@ -21,7 +21,7 @@ namespace Ejercicio_03
 
 			Console.Title = "Ejercicio 03";
 
-			Console.WriteLine("Ingrese un número entero mayor a 1 para buscar los numeros primos previos:");
+			Console.WriteLine("Ingrese un número entero mayor a 1 para buscar los numeros primos:");
 			numUsuario = int.Parse(Console.ReadLine());
 			
 			if (numUsuario > 1)

@@ -22,7 +22,7 @@ namespace Ejercicio_08
 	{
 		public static void Main(string[] args)
 		{
-			Byte quit = 1;
+			byte quit = 1;
 			string nombre;
 			int antiguedad;
 			int horasTrabajdas;

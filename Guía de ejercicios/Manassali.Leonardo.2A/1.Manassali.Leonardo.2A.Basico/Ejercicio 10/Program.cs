@@ -38,13 +38,13 @@ namespace Ejercicio_10
 
 			//Genero la pirámide.
 			Console.Write("\n\n");
-			for (int linea = 0, espacios = 39 , asteriscos = 1 ; linea < altura ; linea++ , espacios--,asteriscos+=2)
+			for (int linea = 1 ; linea <= altura ; linea++ )
 			{
-				for (int iteracion = 0; iteracion < espacios; iteracion++)
+				for ( int espacios = 1 ; espacios <= 40 - linea ; espacios++ )
 				{
 					Console.Write(' ');
 				}
-				for(int iteracion = 0; iteracion < asteriscos; iteracion++ )
+				for (int asteriscos = 1; asteriscos <= linea * 2 - 1 ; asteriscos++)
 				{
 					Console.Write('*');
 				}

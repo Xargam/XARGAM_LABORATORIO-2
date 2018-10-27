@@ -40,9 +40,9 @@ namespace Ejercicio_09
 
 			//Genero la pirámide.
 			Console.Write("\n\n");
-			for (int linea = 0 , asteriscos = 1 ; linea < altura; linea++ , asteriscos += 2 )
+			for (int linea = 1 ; linea <= altura; linea++)
 			{
-				for( int iteracion = 0; iteracion < asteriscos; iteracion++ )
+				for( int asteriscos = 1; asteriscos <= linea * 2 - 1 ; asteriscos++ )
 				{
 					Console.Write('*');
 				}
