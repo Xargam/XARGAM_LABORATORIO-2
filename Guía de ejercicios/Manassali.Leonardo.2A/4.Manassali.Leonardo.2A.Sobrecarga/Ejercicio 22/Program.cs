@@ -1,5 +1,7 @@
-using Numeros;
+using Numero;
+using Ejercicio_13;
 using System;
+
 
 /*
 22. Tomando la clase Conversor del ejercicio 13, se pide:
@@ -40,10 +42,12 @@ namespace Ejercicio_22
 		{
 			Console.Title = "Ejercicio 22";
 			NumeroBinario binario = "1111";
-			NumeroDecimal decimal2 = 15;
+			NumeroDecimal decimal2 = -5;
 			NumeroBinario binario2 = "101,1";
 			 binario -= decimal2;
-			Console.WriteLine((string)binario);
+			decimal2 = Conversor.BinarioDecimal((string)binario);
+			decimal2 += binario2;
+			Console.WriteLine((double)decimal2);
 
 			//Console.WriteLine((string)binario);
 			Console.ReadLine();

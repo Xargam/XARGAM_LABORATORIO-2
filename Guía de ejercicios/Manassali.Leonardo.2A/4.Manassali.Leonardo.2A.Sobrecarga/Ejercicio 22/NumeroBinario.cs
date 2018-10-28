@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Numero;
+using Ejercicio_13;
 
-namespace Numeros
+namespace Numero
 {
 	public class NumeroBinario
 	{
@@ -30,7 +30,7 @@ namespace Numeros
 
 		public static explicit operator string(NumeroBinario binario)
 		{
-			return binario.GetNumero();
+			return binario._numero;
 		}
 
 		public static implicit operator NumeroBinario(string binario)
@@ -48,7 +48,7 @@ namespace Numeros
 		}
 		public static string operator -(NumeroBinario binario, NumeroDecimal numDecimal)
 		{
-			return binario + (NumeroDecimal)((double)numDecimal * -1);
+			return binario + ((double)numDecimal * -1);
 		}
 		public static bool operator ==(NumeroBinario binario, NumeroDecimal numDecimal)
 		{
@@ -60,15 +60,6 @@ namespace Numeros
 		}
 
 		#endregion
-
-		#endregion
-
-		#region Getters
-
-		private string GetNumero()
-		{
-			return this._numero;
-		}
 
 		#endregion
 	}

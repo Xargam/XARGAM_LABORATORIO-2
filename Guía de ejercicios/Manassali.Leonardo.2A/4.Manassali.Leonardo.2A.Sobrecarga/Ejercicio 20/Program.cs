@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Billetes;
+using System;
 
 /*
 20. Generar un nuevo proyecto del tipo Console Application.Construir tres clases dentro de un
@@ -32,12 +28,10 @@ namespace Ejercicio_20
 		{
 			Console.Title = "Ejercicio 20";
 
-      Dolar ahorros = 10;
-      Peso ars = new Peso(400,37);
-			Euro euros = 5;
-
-      ars += euros + ahorros + ahorros;
-			Console.WriteLine((Dolar)ars);
+			Dolar ahorros = 10;
+			Euro euros = 100;
+			Peso ars = 100;
+			Console.WriteLine(  ((Euro)(ahorros + ars)).GetCantidad());
 			Console.ReadLine();
 
 

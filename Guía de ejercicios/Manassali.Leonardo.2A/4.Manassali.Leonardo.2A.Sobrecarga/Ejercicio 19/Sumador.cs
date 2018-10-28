@@ -19,17 +19,15 @@ d. Sobrecargar el operador + (suma) para que puedan sumar cantidadSumas y retorn
 con dicho valor.
 e. Sobrecargar el operador | (pipe) para que retorne True si ambos sumadores tienen igual
 cantidadSumas.
-Agregar un segundo objeto del tipo Sumador en el Main y probar el código.*/
+Agregar un segundo objeto del tipo Sumador en el Main y probar el código.
+*/
 
 namespace Ejercicio_19
 {
 	public class Sumador
 	{
-
 		#region Atributos
-
 		private int _cantidadSumas;
-
 		#endregion
 
 		#region Constructor
@@ -54,7 +52,7 @@ namespace Ejercicio_19
 
 		public static long operator +(Sumador sumador1 , Sumador sumador2)
 		{
-			return sumador1._cantidadSumas + sumador2._cantidadSumas;
+			return (long)sumador1._cantidadSumas + sumador2._cantidadSumas;
 		}
 
 		public static bool operator |( Sumador sumador1 , Sumador sumador2)

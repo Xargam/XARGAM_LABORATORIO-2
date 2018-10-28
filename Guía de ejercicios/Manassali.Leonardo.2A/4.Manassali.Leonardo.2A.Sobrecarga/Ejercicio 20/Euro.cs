@@ -38,7 +38,7 @@ namespace Billetes
 
 		static Euro()
 		{
-			Euro._cotizRespectoDolar = 0.86F;
+			Euro._cotizRespectoDolar = 0.87577F;
 		}
 
 		public Euro(double cantidad)
@@ -59,8 +59,7 @@ namespace Billetes
 
 		public static explicit operator Dolar(Euro euros)
 		{
-			Dolar dolares = new Dolar(euros.GetCantidad() / Euro.GetCotizacion() );
-			return dolares;
+			return new Dolar(euros.GetCantidad() / Euro.GetCotizacion());
 		}
 
 		public static explicit operator Peso(Euro euros)
@@ -70,13 +69,7 @@ namespace Billetes
 
 		public static implicit operator Euro(double euros)
 		{
-			Euro euro = new Euro(euros );
-			return euro;
-		}
-
-		public static implicit operator double(Euro euros)
-		{
-			return euros.GetCantidad();
+			return new Euro(euros);
 		}
 
 		#endregion

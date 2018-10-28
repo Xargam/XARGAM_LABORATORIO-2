@@ -38,26 +38,18 @@ namespace Grados
 
 		public static explicit operator Fahrenheit(Celsius gradosC)
 		{
-			Fahrenheit gradosF = new Fahrenheit( (gradosC.GetGrados() * (9.0 / 5.0)) + 32.0);
-			return gradosF;
+			return new Fahrenheit((gradosC.GetGrados() * (9.0 / 5.0)) + 32.0);
 		}
 
 		public static explicit operator Kelvin(Celsius gradosC)
 		{
-			Kelvin gradosK = (Kelvin)(Fahrenheit)gradosC;
-			return gradosK;
+			return (Kelvin)(Fahrenheit)gradosC;
 		}
 
 		public static implicit operator Celsius(double grados)
 		{
-			Celsius gradosC = new Celsius(grados);
-			return gradosC;
+			return new Celsius(grados);
 		}
-
-		/*public static implicit operator double(Celsius gradosC)
-		{
-			return gradosC.GetGrados();
-		}*/
 
 		#endregion
 
@@ -65,8 +57,7 @@ namespace Grados
 
 		public static Celsius operator -(Celsius gradosC, Fahrenheit gradosF)
 		{
-			Celsius resultado = new Celsius(gradosC.GetGrados() - ((Celsius)gradosF).GetGrados());
-			return resultado;
+			return gradosC + new Fahrenheit( gradosF.GetGrados() * -1);
 		}
 
 		public static Celsius operator -(Celsius gradosC, Kelvin gradosK )
@@ -76,8 +67,7 @@ namespace Grados
 
 		public static Celsius operator +(Celsius gradosC, Fahrenheit gradosF)
 		{
-			Celsius resultado = new Celsius(gradosC.GetGrados() + ((Celsius)gradosF).GetGrados());
-			return resultado;
+			return new Celsius(gradosC.GetGrados() + ((Celsius)gradosF).GetGrados());
 		}
 
 		public static Celsius operator +(Celsius gradosC, Kelvin gradosK)

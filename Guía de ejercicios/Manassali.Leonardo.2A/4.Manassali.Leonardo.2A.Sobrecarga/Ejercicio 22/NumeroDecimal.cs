@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Numero;
+using Ejercicio_13;
 
-namespace Numeros
+namespace Numero
 {
 	public class NumeroDecimal
 	{
@@ -30,7 +30,7 @@ namespace Numeros
 
 		public static explicit operator double(NumeroDecimal numero )
 		{
-			return numero.GetNumero();
+			return numero._numero;
 		}
 
 		public static implicit operator NumeroDecimal(double numero )
@@ -62,16 +62,6 @@ namespace Numeros
 		#endregion
 
 		#endregion
-
-		#region Getters
-
-		private double GetNumero()
-		{
-			return this._numero;
-		}
-
-		#endregion
-
 
 	}
 }

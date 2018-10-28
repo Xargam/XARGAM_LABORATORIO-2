@@ -6,56 +6,43 @@ string DecimalBinario(double). Convierte un número de decimal a binario.
 double BinarioDecimal(string). Convierte un número binario a decimal.
 */
 
-namespace Numero
+namespace Ejercicio_13
 {
 	public class Conversor
 	{
+		#region Metodos
 		public static double BinarioDecimal(string binario)
 		{
 			double numDecimal = Double.NaN;
-			int exponente = 0;
-			bool negativo = binario.Contains("-"); ;
-			if (Double.TryParse(binario, out numDecimal) && binario.Trim('1', '0', ',', '.', '-') == "")
+			if ( Double.TryParse(binario, out double n) && binario.Trim("10,.-".ToCharArray()) == "" )
 			{
-				numDecimal = 0;
-				binario = binario.Replace(",", "");
-				binario = binario.Replace("-", "");
-				exponente = (binario.IndexOf('.') > -1) ? binario.IndexOf('.') - 1 : binario.Length - 1;
+				//Eliminación de parte no entera, coma, signo y puntos en caso de existir.
 				binario = binario.Replace(".", "");
-				for (int i = 0; i < binario.Length; i++)
+				binario = binario.Replace("-", "");
+				binario = (binario.IndexOf(',') > -1) ? binario.Remove(binario.IndexOf(',')) : binario;
+				numDecimal = 0;
+				for ( int i = 0 ; i < binario.Length ; i++ )
 				{
-					numDecimal += Double.Parse(binario[i].ToString()) * Math.Pow(2, exponente - i);
+					numDecimal += Double.Parse(binario[i].ToString()) * Math.Pow(2, binario.Length - 1 - i);
 				}
-				numDecimal = (negativo) ? numDecimal * -1 : numDecimal;
 			}
 			return numDecimal;
 		}
 
 		public static string DecimalBinario(double numero)
 		{
-			double parteEntera;
-			double parteDecimal;
-			string binario = "";
-			bool negativo = numero < 0;
+			string binario = "Valor invalido";
 
-			numero = Math.Abs(numero);
-			parteEntera = Math.Truncate(numero);
-			parteDecimal = numero - parteEntera;
+			numero = Math.Truncate(Math.Abs(numero));
+			binario = (numero == 0) ? "0" : "";
 
-			binario = (parteEntera == 0) ? "0" : "";
-			while (parteEntera > 0)
+			while ( numero > 0 )
 			{
-				binario = (Math.Truncate(parteEntera % 2)).ToString() + binario;
-				parteEntera = Math.Truncate(parteEntera / 2);
+				binario = (numero % 2).ToString() + binario;
+				numero = Math.Truncate(numero /= 2);
 			}
-			binario += (parteDecimal == 0) ? "" : ".";
-			while (parteDecimal > 0)
-			{
-				binario += Math.Truncate(parteDecimal *= 2).ToString();
-				parteDecimal = (parteDecimal >= 1) ? parteDecimal - 1 : parteDecimal;
-			}
-			binario = (negativo) ? binario.Insert(0, "-") : binario;
 			return binario;
-		}
+		} 
+		#endregion
 	}
 }

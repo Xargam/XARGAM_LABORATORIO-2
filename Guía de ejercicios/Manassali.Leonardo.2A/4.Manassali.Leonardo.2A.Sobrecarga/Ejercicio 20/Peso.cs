@@ -38,7 +38,7 @@ namespace Billetes
 
 		static Peso()
 		{
-			Peso._cotizRespectoDolar = 40;
+			Peso._cotizRespectoDolar = 36.7385F;
 		}
 
 		public Peso(double cantidad)
@@ -57,44 +57,37 @@ namespace Billetes
 
 		public static explicit operator Dolar(Peso pesos)
 		{
-			Dolar dolares = new Dolar(pesos.GetCantidad() / Peso.GetCotizacion() );
-			return dolares;
+			return new Dolar(pesos.GetCantidad() / Peso.GetCotizacion());
 		}
 
 		public static explicit operator Euro(Peso pesos)
 		{
-			return (Euro)((Dolar)pesos);
+			return (Euro)(Dolar)pesos;
 		}
 
-		public static implicit operator Peso(double peso)
+		public static implicit operator Peso(double pesos)
 		{
-			Peso pesos = new Peso(peso);
-			return pesos;
-		}
-
-		public static implicit operator double(Peso pesos)
-		{
-			return pesos.GetCantidad();
+			return new Peso(pesos);
 		}
 
 		public static Peso operator -(Peso pesos, Euro euros)
 		{
-			return (Peso)((Dolar)pesos - euros);
+			return pesos - (Dolar)euros;
 		}
 
 		public static Peso operator -(Peso pesos, Dolar dolares)
 		{
-			return pesos - (Euro)dolares;
+			return (Peso)((Dolar)pesos - (Peso)dolares);
 		}
 
 		public static Peso operator +(Peso pesos, Euro euros)
 		{
-			return (Peso)((Dolar)pesos + euros) ;
+			return pesos + (Dolar)euros;
 		}
 
 		public static Peso operator +(Peso pesos, Dolar dolares)
 		{
-			return pesos + (Euro)dolares;
+			return (Peso)(dolares + pesos);
 		}
 
 		public static bool operator !=(Peso pesos, Euro euros)
@@ -112,6 +105,11 @@ namespace Billetes
 			return !(pesos == dolares);
 		}
 
+		public static bool operator ==(Peso pesos, Dolar dolares)
+		{
+			return (Dolar)pesos == dolares;
+		}
+
 		public static bool operator ==(Peso pesos, Euro euros)
 		{
 			return  pesos == (Dolar)euros;
@@ -121,12 +119,6 @@ namespace Billetes
 		{
 			return pesos1 == (Dolar)pesos2;
 		}
-
-		public static bool operator ==(Peso pesos, Dolar dolares)
-		{
-			return (Dolar)pesos == dolares;
-		}
-
 
 		#endregion
 

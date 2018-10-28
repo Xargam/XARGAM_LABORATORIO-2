@@ -19,7 +19,8 @@ d. Sobrecargar el operador + (suma) para que puedan sumar cantidadSumas y retorn
 con dicho valor.
 e. Sobrecargar el operador | (pipe) para que retorne True si ambos sumadores tienen igual
 cantidadSumas.
-Agregar un segundo objeto del tipo Sumador en el Main y probar el código.*/
+Agregar un segundo objeto del tipo Sumador en el Main y probar el código.
+*/
 
 namespace Ejercicio_19
 {
@@ -29,10 +30,11 @@ namespace Ejercicio_19
 		{
 			Console.Title = "Ejercicio 19";
 
-			Sumador sumador = new Sumador(10);
-			Sumador sumador2 = new Sumador(10);
-			//Console.WriteLine("La suma da {0}",sumador.Sumar(5, 5)); 
-			//Console.WriteLine("La suma da {0}",sumador.Sumar("a", "b")); 
+			Sumador sumador = new Sumador(2000000000);
+			Sumador sumador2 = new Sumador(2000000002);
+			Console.WriteLine("La suma da {0}",sumador.Sumar(275465446, 445546545)); 
+			Console.WriteLine("La suma da {0}",sumador.Sumar("a", "b"));
+			Console.WriteLine("Sumador tiene {0} sumas.",(int)sumador);
 		    long sumas = sumador + sumador2;
 			Console.WriteLine("Se han realizado {0} sumas",sumas);
 			if( sumador | sumador2 )
