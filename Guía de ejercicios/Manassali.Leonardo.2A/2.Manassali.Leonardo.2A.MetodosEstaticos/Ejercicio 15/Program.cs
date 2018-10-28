@@ -49,14 +49,9 @@ namespace Ejercicio_15
 				}
 				Console.WriteLine("Continuar? s/n :");
 				quit = Console.ReadKey().KeyChar;
-				quit = Char.ToLower(quit);
 				Console.Clear();
 			}
 			while (quit == 's');
-			Console.ReadLine();
-
-
-
 		}
 	}
 }

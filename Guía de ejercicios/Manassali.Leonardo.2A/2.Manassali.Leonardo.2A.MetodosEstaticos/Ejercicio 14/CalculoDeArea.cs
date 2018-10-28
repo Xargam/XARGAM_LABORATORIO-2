@@ -10,7 +10,8 @@ cálculo del área que corresponda:
 a. double CalcularCuadrado(double)
 b. double CalcularTriangulo(double, double)
 c. double CalcularCirculo(double)
-El ingreso de los datos como la visualización se deberán realizar desde el método Main().*/
+El ingreso de los datos como la visualización se deberán realizar desde el método Main().
+*/
 
 namespace Ejercicio_14
 {
@@ -18,7 +19,7 @@ namespace Ejercicio_14
 	{
 		public static double CalcularCuadrado(double lado )
 		{
-			return lado * lado;
+			return Math.Pow(lado,2);
 		}
 
 		public static double CalcularTriangulo(double baseTriangulo , double alturaTriangulo)
@@ -28,7 +29,7 @@ namespace Ejercicio_14
 
 		public static double CalcularCirculo(double radio )
 		{
-			return 3.14 * radio * radio;
+			return Math.PI * Math.Pow(radio,2);
 		}
 	}
 }

@@ -10,7 +10,8 @@ cálculo del área que corresponda:
 a. double CalcularCuadrado(double)
 b. double CalcularTriangulo(double, double)
 c. double CalcularCirculo(double)
-El ingreso de los datos como la visualización se deberán realizar desde el método Main().*/
+El ingreso de los datos como la visualización se deberán realizar desde el método Main().
+*/
 
 namespace Ejercicio_14
 {
@@ -37,7 +38,7 @@ namespace Ejercicio_14
 
 			Console.WriteLine("Ingrese el radio de su círculo:");
 			radio = double.Parse(Console.ReadLine());
-			Console.WriteLine("El area de su círculo es de {0} cm.", CalculoDeArea.CalcularCirculo(radio));
+			Console.WriteLine("El area de su círculo es de {0 : #,#.00} cm.", CalculoDeArea.CalcularCirculo(radio));
 			Console.ReadLine();
 		}
 	}
