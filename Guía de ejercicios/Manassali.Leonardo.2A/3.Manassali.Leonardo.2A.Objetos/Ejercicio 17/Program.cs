@@ -41,14 +41,22 @@ namespace Ejercicio_17
 
 			Console.Title = "Ejercicio 17";
 
-			Boligrafo boligrafo = new Boligrafo(10, ConsoleColor.Red);
-			
-			if( !boligrafo.Pintar(0, out dibujo) )
+			Boligrafo boligrafo1 = new Boligrafo(100, ConsoleColor.Blue);
+			Console.WriteLine("El bolígrafo 1 tiene {0} de tinta.",boligrafo1.GetTinta());
+			Console.WriteLine("El bolígrafo 1 es de color {0}.",boligrafo1.GetColor());
+			Boligrafo boligrafo2 = new Boligrafo(50, ConsoleColor.Red);
+			Console.WriteLine("El bolígrafo 2 tiene {0} de tinta.", boligrafo2.GetTinta());
+			Console.WriteLine("El bolígrafo 2 es de color {0}.", boligrafo2.GetColor());
+
+			if ( boligrafo1.Pintar(100,out dibujo) )
 			{
-				Console.WriteLine("Ha faltado tinta.");
+				Console.WriteLine("No ha faltado tinta.");
 			}
-			//boligrafo.Recargar();
-			Console.Write("Dibujo: {0} Tinta: {1} ",dibujo, boligrafo.GetTinta());
+			boligrafo1.Recargar();
+			Console.WriteLine("Boligrafo 1 recargado con {0} de tinta.",boligrafo1.GetTinta());
+			Console.WriteLine("Dibujo de boligrafo 1: {0}",dibujo);
+			boligrafo2.Pintar(5, out dibujo);
+			Console.WriteLine("Dibujo de boligrafo 2: {0}", dibujo);
 			Console.ReadLine();
 		}
 	}

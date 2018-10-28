@@ -38,8 +38,8 @@ namespace PruebaGeometria
 		public static void Main(string[] args)
 		{
 			Console.Title = "Ejercicio 18";
-			Punto vertice1 = new Punto(0, 5);
-			Punto vertice3 = new Punto(1,7 );
+			Punto vertice1 = new Punto(-10, -3);
+			Punto vertice3 = new Punto(3,-1 );
 			Rectangulo rectangulo = new Rectangulo(vertice1,vertice3);
 			MostrarRectangulo(rectangulo,vertice1,vertice3);
 			Console.ReadLine();
@@ -56,6 +56,8 @@ namespace PruebaGeometria
 			Console.WriteLine("Vertice 4: X: {0} Y: {1}", vertice4.GetX(), vertice4.GetY());
 			Console.WriteLine("Perimetro: {0}", rectangulo.Perimetro());
 			Console.WriteLine("Area: {0}", rectangulo.Area());
+			//Console.WriteLine(rectangulo.Area());
+			//Console.WriteLine(rectangulo.Perimetro());
 		}
 	}
 	

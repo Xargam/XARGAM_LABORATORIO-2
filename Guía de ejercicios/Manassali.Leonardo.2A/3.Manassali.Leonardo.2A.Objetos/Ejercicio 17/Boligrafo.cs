@@ -27,7 +27,8 @@ g.Utilizar todos los métodos en el Main.
 h.Al utilizar Pintar, si corresponde, se deberá dibujar por pantalla con el color de dicho
 bolígrafo.
 Nota: Crear el constructor que crea conveniente. La clase Boligrafo y el Program deben estar en
-namespaces distintos.*/
+namespaces distintos.
+*/
 
 namespace Entidades
 {

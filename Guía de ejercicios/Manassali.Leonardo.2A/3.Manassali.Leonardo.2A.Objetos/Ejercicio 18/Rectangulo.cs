@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /*
 18. Escribir una aplicación con estos dos espacios de nombres(namespaces) : Geometría y
@@ -34,37 +30,26 @@ namespace Geometria
 {
 	public class Rectangulo
 	{
-
 		#region Atributos
-
 		private float _area;
 		private float _perimetro;
 		private Punto _vertice1;
 		private Punto _vertice2;
 		private Punto _vertice3;
 		private Punto _vertice4;
-
 		#endregion
 
 		#region Constructor
 
-		public Rectangulo( Punto vertice1 , Punto vertice3)
+		public Rectangulo(Punto vertice1, Punto vertice3)
 		{
-			int baseR;
-			int alturaR;
+			this._area = float.NaN;
+			this._perimetro = float.NaN;
 
-			Punto vertice2 = new Punto(vertice3.GetX(), vertice1.GetY()); 
-			Punto vertice4 = new Punto(vertice1.GetX(), vertice3.GetY());
 			this._vertice1 = vertice1;
-			this._vertice2 = vertice2;
 			this._vertice3 = vertice3;
-			this._vertice4 = vertice4;
-
-			baseR = Math.Abs( this._vertice2.GetX() - this._vertice1.GetX() );
-			alturaR = Math.Abs( this._vertice4.GetY() - this._vertice1.GetY() );
-
-			this._area = baseR * alturaR;
-			this._perimetro = (baseR + alturaR) * 2;
+			this._vertice2 = new Punto(this._vertice3.GetX(), this._vertice1.GetY());
+			this._vertice4 = new Punto(this._vertice1.GetX(), this._vertice3.GetY());
 		}
 
 		#endregion
@@ -73,11 +58,22 @@ namespace Geometria
 
 		public float Area()
 		{
+			if ( float.IsNaN(this._area) )
+			{
+				this._area = Math.Abs(this._vertice2.GetX() - this._vertice1.GetX());
+				this._area *= Math.Abs(this._vertice4.GetY() - this._vertice1.GetY());
+			}
 			return this._area;
 		}
 
 		public float Perimetro()
 		{
+			if ( float.IsNaN(this._perimetro) )
+			{
+				this._perimetro = Math.Abs(this._vertice2.GetX() - this._vertice1.GetX());
+				this._perimetro += Math.Abs(this._vertice4.GetY() - this._vertice1.GetY());
+				this._perimetro *= 2;
+			}
 			return this._perimetro;
 		}
 

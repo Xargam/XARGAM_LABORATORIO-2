@@ -43,7 +43,7 @@ namespace Ejercicio_16
 			alumno3.nombre = "Juan";
 			alumno3.apellido = "Crusso";
 			alumno3.legajo = 12;
-			alumno3.Estudiar(4, 6);
+			alumno3.Estudiar(10, 2);
 			Console.WriteLine(alumno3.Mostrar());
 
 			Console.ReadLine();

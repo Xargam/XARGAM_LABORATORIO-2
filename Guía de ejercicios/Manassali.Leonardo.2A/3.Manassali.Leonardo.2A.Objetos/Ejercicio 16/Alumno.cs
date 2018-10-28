@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 /*
 16. Crear la clase Alumno de acuerdo al siguiente diagrama:
@@ -37,34 +38,35 @@ namespace Ejercicio_16
 			if (this._nota1 >= 4 && this._nota2 >= 4)
 			{
 				Random random = new Random();
-				this._notaFinal = random.Next(1,10);
+				this._notaFinal = random.Next(1,11);
 			}
 		}
 
 		public void Estudiar(byte nota1, byte nota2)
 		{
-			if( nota1 >= 1 && nota1 <= 10 && nota2 >= 1 && nota1 <= 10 )
+			if( nota1 >= 1 && nota1 <= 10 )
 			{
 				this._nota1 = nota1;
+			}
+			if ( nota2 >= 1 && nota2 <= 10 )
+			{
 				this._nota2 = nota2;
 			}
 		}
 
 		public string Mostrar()
 		{
-			string datos;
-
-			datos = "----\n";
-			datos += "Legajo: " + this.legajo.ToString();
-			datos += "\nNombre: " + this.nombre + "\nApellido: " + this.apellido;
-			datos += "\nNota 1: " + this._nota1.ToString() + "\nNota 2: " + this._nota2.ToString();
-			datos += "\nNota final: ";
+			StringBuilder datos = new StringBuilder();
 
 			this.CalcularFinal();
-			datos += ( this._notaFinal == -1 ) ? "Alumno desaprobado." : this._notaFinal.ToString() ;
-			datos += "\n----\n";
-
-			return datos;
+			datos.AppendLine("----");
+			datos.AppendFormat("Legajo: {0}\r\n", this.legajo);
+			datos.AppendFormat("Nombre: {0}\r\n", this.nombre);
+			datos.AppendFormat("Apellido: {0}\r\n", this.apellido);
+			datos.AppendFormat("Nota 1: {0}\r\n", this._nota1);
+			datos.AppendFormat("Nota 2: {0}\r\n", this._nota2);
+			datos.AppendFormat("Nota final: {0}",(this._notaFinal == -1)? "Alumno desaprobado." : this._notaFinal.ToString() );
+			return datos.ToString();
 		}
 
 		#endregion
