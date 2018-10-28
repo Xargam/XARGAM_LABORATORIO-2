@@ -23,8 +23,6 @@ namespace Ejercicio_16
 		private byte _nota2;
 		private float _notaFinal;
 
-
-
 		public string nombre;
 		public string apellido;
 		public int legajo;

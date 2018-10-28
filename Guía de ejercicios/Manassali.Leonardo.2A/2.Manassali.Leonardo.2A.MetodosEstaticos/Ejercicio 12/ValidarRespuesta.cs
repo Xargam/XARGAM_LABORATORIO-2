@@ -17,9 +17,11 @@ namespace Ejercicio_12
 {
 	public class ValidarRespuesta
 	{
-		public static bool ValidarSN( char rta )
+		#region Metodos
+		public static bool ValidarSN(char rta)
 		{
 			return rta == 'S';
-		}
+		} 
+		#endregion
 	}
 }

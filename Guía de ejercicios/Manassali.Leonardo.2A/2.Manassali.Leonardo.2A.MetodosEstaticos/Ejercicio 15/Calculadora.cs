@@ -21,15 +21,16 @@ namespace Ejercicio_15
 {
 	public class Calculadora
 	{
-		private static bool Validar( double operando2 )
+		#region Metodos
+		private static bool Validar(double operando2)
 		{
 			return operando2 != 0;
 		}
-		public static string Calcular( double operando1 ,char operacion , double operando2 )
+		public static string Calcular(double operando1, char operacion, double operando2)
 		{
 			string resultado = "ERROR";
 
-			switch( operacion )
+			switch ( operacion )
 			{
 				case '+':
 					resultado = Convert.ToString(operando1 + operando2);
@@ -42,13 +43,14 @@ namespace Ejercicio_15
 					break;
 				case '/':
 
-					if( Validar(operando2) )
+					if ( Validar(operando2) )
 					{
 						resultado = Convert.ToString(operando1 / operando2);
 					}
 					break;
 			}
 			return resultado;
-		}
+		} 
+		#endregion
 	}
 }

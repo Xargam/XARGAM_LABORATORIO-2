@@ -17,19 +17,21 @@ namespace Ejercicio_14
 {
 	public class CalculoDeArea
 	{
-		public static double CalcularCuadrado(double lado )
+		#region Metodos
+		public static double CalcularCuadrado(double lado)
 		{
-			return Math.Pow(lado,2);
+			return Math.Pow(lado, 2);
 		}
 
-		public static double CalcularTriangulo(double baseTriangulo , double alturaTriangulo)
+		public static double CalcularTriangulo(double baseTriangulo, double alturaTriangulo)
 		{
 			return baseTriangulo * alturaTriangulo;
 		}
 
-		public static double CalcularCirculo(double radio )
+		public static double CalcularCirculo(double radio)
 		{
-			return Math.PI * Math.Pow(radio,2);
-		}
+			return Math.PI * Math.Pow(radio, 2);
+		} 
+		#endregion
 	}
 }

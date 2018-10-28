@@ -18,9 +18,11 @@ namespace Ejercicio_11
 {
 	public class Validacion
 	{
+		#region Metodos
 		public static bool Validar(int valor, int min, int max)
 		{
-			return (valor <= max && valor >= min );
-		}
+			return (valor <= max && valor >= min);
+		} 
+		#endregion
 	}
 }

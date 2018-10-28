@@ -10,6 +10,7 @@ namespace Ejercicio_13
 {
 	public class Conversor
 	{
+		#region Metodos
 		public static double BinarioDecimal(string binario)
 		{
 			double numDecimal = Double.NaN;
@@ -38,9 +39,10 @@ namespace Ejercicio_13
 			while ( numero > 0 )
 			{
 				binario = (numero % 2).ToString() + binario;
-				numero = Math.Truncate(numero /= 2 );
+				numero = Math.Truncate(numero /= 2);
 			}
 			return binario;
-		}
+		} 
+		#endregion
 	}
 }
