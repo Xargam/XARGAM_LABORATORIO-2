@@ -37,10 +37,12 @@ namespace PruebaGeometria
 	{
 		public static void Main(string[] args)
 		{
-			Console.Title = "Ejercicio 18";
 			Punto vertice1 = new Punto(-10, -3);
-			Punto vertice3 = new Punto(3,-1 );
-			Rectangulo rectangulo = new Rectangulo(vertice1,vertice3);
+			Punto vertice3 = new Punto(3, -1);
+			Rectangulo rectangulo = new Rectangulo(vertice1, vertice3);
+
+			Console.Title = "Ejercicio 18";
+			
 			MostrarRectangulo(rectangulo,vertice1,vertice3);
 			Console.ReadLine();
 		}
