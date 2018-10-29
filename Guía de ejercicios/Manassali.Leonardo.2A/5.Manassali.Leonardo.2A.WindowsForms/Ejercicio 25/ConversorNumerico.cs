@@ -13,16 +13,18 @@ namespace Ejercicio_25
 {
 	public partial class ConversorNumerico : Form
 	{
+		#region Constructor
 		public ConversorNumerico()
 		{
 			InitializeComponent();
-		}
+		} 
+		#endregion
 
+		#region Metodos
 		private void btnBinarioDecimalbtnBinarioDecimal_Click(object sender, EventArgs e)
 		{
 			this.txtDecimal.Text = Conversor.BinarioDecimal(this.txtBinarioDecimal.Text).ToString();
 		}
-
 		private void btnDecimalBinario_Click(object sender, EventArgs e)
 		{
 			string binario = "NeuN";
@@ -31,6 +33,7 @@ namespace Ejercicio_25
 				binario = Conversor.DecimalBinario(numeroDecimal);
 			}
 			this.txtBinario.Text = binario;
-		}
+		} 
+		#endregion
 	}
 }
