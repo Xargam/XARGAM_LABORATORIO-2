@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio_28
 {
-	partial class Form1
+	partial class ContadorPalabras
 	{
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -28,17 +28,17 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+			this.rtbTexto = new System.Windows.Forms.RichTextBox();
 			this.btn = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// richTextBox1
+			// rtbTexto
 			// 
-			this.richTextBox1.Location = new System.Drawing.Point(12, 12);
-			this.richTextBox1.Name = "richTextBox1";
-			this.richTextBox1.Size = new System.Drawing.Size(543, 256);
-			this.richTextBox1.TabIndex = 0;
-			this.richTextBox1.Text = "";
+			this.rtbTexto.Location = new System.Drawing.Point(12, 12);
+			this.rtbTexto.Name = "rtbTexto";
+			this.rtbTexto.Size = new System.Drawing.Size(543, 256);
+			this.rtbTexto.TabIndex = 0;
+			this.rtbTexto.Text = "";
 			// 
 			// btn
 			// 
@@ -50,14 +50,15 @@
 			this.btn.UseVisualStyleBackColor = true;
 			this.btn.Click += new System.EventHandler(this.btn_Click);
 			// 
-			// Form1
+			// ContadorPalabras
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(567, 309);
 			this.Controls.Add(this.btn);
-			this.Controls.Add(this.richTextBox1);
-			this.Name = "Form1";
+			this.Controls.Add(this.rtbTexto);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Name = "ContadorPalabras";
 			this.Text = "Contador de palabras";
 			this.ResumeLayout(false);
 
@@ -65,7 +66,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.RichTextBox richTextBox1;
+		private System.Windows.Forms.RichTextBox rtbTexto;
 		private System.Windows.Forms.Button btn;
 	}
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//27. Realizar el ejercicio anterior pero esta vez con las siguientes colecciones: Pilas, Colas y Listas.
+
 namespace Ejercicio_27
 {
 	public class Program
@@ -17,7 +19,8 @@ namespace Ejercicio_27
 			Console.Title = "Ejercicio 27";
 			for (int i = 0; i < 20; i++)
 			{
-				valor = random.Next(-1000, 1000);
+				valor = random.Next(-1000, 1001);
+				valor = (valor == 0) ? 1 : valor;
 				listaEnteros.Add(valor);
 				colaEnteros.Enqueue(valor);
 				pilaEnteros.Push(valor);
@@ -57,7 +60,6 @@ namespace Ejercicio_27
 			Program.MostrarVector(pilaEnteros.ToArray());
 
 			Console.WriteLine("La pila en orden: negativos-creciente");
-
 			arrayIntermedio = pilaEnteros.ToArray();
 			pilaEnteros.Clear();
 
