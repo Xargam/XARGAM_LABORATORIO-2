@@ -13,7 +13,7 @@ namespace Ejercicio_B
 		public static void Main(string[] args)
 		{
 			byte edad;
-			string nombre = "";
+			string nombre;
 
 			Console.Title = "Ejercicio B - Pedir datos";
 
