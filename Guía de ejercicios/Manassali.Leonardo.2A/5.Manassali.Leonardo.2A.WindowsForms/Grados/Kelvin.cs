@@ -38,8 +38,7 @@ namespace Grados
 
 		public static explicit operator Celsius(Kelvin gradosK)
 		{
-			Fahrenheit gradosF = new Fahrenheit((gradosK.GetGrados() * (9.0 / 5.0)) - 459.67);
-			return (Celsius)gradosF;
+			return new Celsius(gradosK.GetGrados() - 273.15);
 		}
 
 		public static explicit operator Fahrenheit(Kelvin gradosK)
@@ -49,14 +48,8 @@ namespace Grados
 
 		public static implicit operator Kelvin(double grados)
 		{
-			Kelvin gradosK = new Kelvin(grados);
-			return gradosK;
+			return new Kelvin(grados);
 		}
-
-		/*public static implicit operator double(Kelvin gradosK)
-		{
-			return gradosK.GetGrados();
-		}*/
 
 		#endregion
 
@@ -64,13 +57,12 @@ namespace Grados
 
 		public static Kelvin operator -(Kelvin gradosK, Fahrenheit gradosF)
 		{
-			return gradosK - (Celsius)gradosF ;
+			return gradosK.GetGrados() - ((Kelvin)gradosF).GetGrados();
 		}
 
 		public static Kelvin operator -(Kelvin gradosK, Celsius gradosC)
 		{
-			Kelvin resultado = new Kelvin(gradosK.GetGrados() - ((Kelvin)gradosC).GetGrados());
-			return resultado;
+			return gradosK - (Fahrenheit)gradosC;
 		}
 
 		public static Kelvin operator +(Kelvin gradosK, Fahrenheit gradosF)
@@ -80,8 +72,7 @@ namespace Grados
 
 		public static Kelvin operator +(Kelvin gradosK, Celsius gradosC)
 		{
-			Kelvin resultado = new Kelvin(gradosK.GetGrados() + ((Kelvin)gradosC).GetGrados());
-			return resultado;
+			return new Kelvin(gradosK.GetGrados() + ((Kelvin)gradosC).GetGrados());
 		}
 
 		#endregion
@@ -115,7 +106,7 @@ namespace Grados
 
 		public static bool operator ==(Kelvin gradosK1, Kelvin gradosK2)
 		{
-			return gradosK1.GetGrados() == gradosK2.GetGrados();
+			return (Celsius)gradosK1 == (Celsius)gradosK2;
 		}
 
 		#endregion

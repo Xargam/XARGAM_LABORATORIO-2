@@ -57,7 +57,7 @@ namespace Grados
 
 		public static Fahrenheit operator -(Fahrenheit gradosF, Celsius gradosC )
 		{
-			return (Fahrenheit)((Celsius)gradosF - (Fahrenheit)gradosC);
+			return gradosF.GetGrados() - ((Fahrenheit)gradosC).GetGrados();
 		}
 
 		public static Fahrenheit operator -(Fahrenheit gradosF, Kelvin gradosK)
@@ -67,12 +67,12 @@ namespace Grados
 
 		public static Fahrenheit operator +(Fahrenheit gradosF, Kelvin gradosK)
 		{
-			return (Fahrenheit)((Celsius)gradosF + gradosK);
+			return gradosF + (Celsius)gradosK;
 		}
 
 		public static Fahrenheit operator +(Fahrenheit gradosF, Celsius gradosC)
 		{
-			return gradosF + (Kelvin)gradosC;
+			return gradosF.GetGrados() + ((Fahrenheit)gradosC).GetGrados();
 		}
 
 		#endregion

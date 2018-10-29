@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio_25
 {
-	partial class Form1
+	partial class ConversorNumerico
 	{
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -115,7 +115,6 @@
 			this.txtBinario.Size = new System.Drawing.Size(178, 20);
 			this.txtBinario.TabIndex = 7;
 			this.txtBinario.Text = "0";
-			this.txtBinario.TextChanged += new System.EventHandler(this.txtBinario_TextChanged);
 			// 
 			// Form1
 			// 

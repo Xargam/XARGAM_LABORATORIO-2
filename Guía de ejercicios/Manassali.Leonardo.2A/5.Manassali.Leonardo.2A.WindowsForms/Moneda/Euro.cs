@@ -23,7 +23,7 @@ sumarlos.
 h.Reutilizar el código.Sólo realizar las conversiones dentro de los operadores para dicho uso.
 */
 
-namespace Moneda
+namespace Billetes
 {
 	public class Euro
 	{
@@ -38,7 +38,7 @@ namespace Moneda
 
 		static Euro()
 		{
-			Euro._cotizRespectoDolar = 0.86F;
+			Euro._cotizRespectoDolar = 0.87671F;
 		}
 
 		public Euro(double cantidad)
@@ -59,8 +59,7 @@ namespace Moneda
 
 		public static explicit operator Dolar(Euro euros)
 		{
-			Dolar dolares = new Dolar(euros.GetCantidad() / Euro.GetCotizacion() );
-			return dolares;
+			return new Dolar(euros.GetCantidad() / Euro.GetCotizacion());
 		}
 
 		public static explicit operator Peso(Euro euros)
@@ -70,14 +69,8 @@ namespace Moneda
 
 		public static implicit operator Euro(double euros)
 		{
-			Euro euro = new Euro(euros );
-			return euro;
+			return new Euro(euros);
 		}
-
-		/*public static implicit operator double(Euro euros)
-		{
-			return euros.GetCantidad();
-		}*/
 
 		#endregion
 

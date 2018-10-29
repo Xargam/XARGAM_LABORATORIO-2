@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio_23
 {
-	partial class Form1
+	partial class ConversorDinero
 	{
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -60,7 +60,6 @@
 			this.txtEuro.Size = new System.Drawing.Size(160, 38);
 			this.txtEuro.TabIndex = 0;
 			this.txtEuro.Text = "0";
-			this.txtEuro.TextChanged += new System.EventHandler(this.txtEuro_TextChanged);
 			// 
 			// txtDolar
 			// 
@@ -71,7 +70,6 @@
 			this.txtDolar.Size = new System.Drawing.Size(160, 38);
 			this.txtDolar.TabIndex = 1;
 			this.txtDolar.Text = "0";
-			this.txtDolar.TextChanged += new System.EventHandler(this.txtDolar_TextChanged);
 			// 
 			// txtPeso
 			// 
@@ -82,7 +80,6 @@
 			this.txtPeso.Size = new System.Drawing.Size(160, 38);
 			this.txtPeso.TabIndex = 2;
 			this.txtPeso.Text = "0";
-			this.txtPeso.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
 			// 
 			// lblEuro
 			// 
@@ -93,7 +90,6 @@
 			this.lblEuro.Size = new System.Drawing.Size(61, 29);
 			this.lblEuro.TabIndex = 3;
 			this.lblEuro.Text = "Euro";
-			this.lblEuro.Click += new System.EventHandler(this.lblEuro_Click);
 			// 
 			// lblDolar
 			// 
@@ -104,7 +100,6 @@
 			this.lblDolar.Size = new System.Drawing.Size(71, 29);
 			this.lblDolar.TabIndex = 4;
 			this.lblDolar.Text = "Dólar";
-			this.lblDolar.Click += new System.EventHandler(this.lblDolar_Click);
 			// 
 			// lblPeso
 			// 
@@ -115,7 +110,6 @@
 			this.lblPeso.Size = new System.Drawing.Size(68, 29);
 			this.lblPeso.TabIndex = 5;
 			this.lblPeso.Text = "Pesos";
-			this.lblPeso.Click += new System.EventHandler(this.lblPeso_Click);
 			// 
 			// btnEuro
 			// 
@@ -170,7 +164,6 @@
 			this.lblDolar2.Size = new System.Drawing.Size(71, 29);
 			this.lblDolar2.TabIndex = 10;
 			this.lblDolar2.Text = "Dólar";
-			this.lblDolar2.Click += new System.EventHandler(this.label2_Click);
 			// 
 			// lblPeso2
 			// 
@@ -191,8 +184,7 @@
 			this.txtEuroEuro.ReadOnly = true;
 			this.txtEuroEuro.Size = new System.Drawing.Size(129, 38);
 			this.txtEuroEuro.TabIndex = 12;
-			this.txtEuroEuro.Text = "0";
-			this.txtEuroEuro.TextChanged += new System.EventHandler(this.txtEuroEuro_TextChanged);
+			this.txtEuroEuro.Text = "0,00";
 			// 
 			// txtEuroDolar
 			// 
@@ -203,7 +195,7 @@
 			this.txtEuroDolar.ReadOnly = true;
 			this.txtEuroDolar.Size = new System.Drawing.Size(129, 38);
 			this.txtEuroDolar.TabIndex = 13;
-			this.txtEuroDolar.Text = "0";
+			this.txtEuroDolar.Text = "0,00";
 			// 
 			// txtEuroPeso
 			// 
@@ -214,7 +206,7 @@
 			this.txtEuroPeso.ReadOnly = true;
 			this.txtEuroPeso.Size = new System.Drawing.Size(129, 38);
 			this.txtEuroPeso.TabIndex = 14;
-			this.txtEuroPeso.Text = "0";
+			this.txtEuroPeso.Text = "0,00";
 			// 
 			// txtDolarEuro
 			// 
@@ -225,7 +217,7 @@
 			this.txtDolarEuro.ReadOnly = true;
 			this.txtDolarEuro.Size = new System.Drawing.Size(129, 38);
 			this.txtDolarEuro.TabIndex = 15;
-			this.txtDolarEuro.Text = "0";
+			this.txtDolarEuro.Text = "0,00";
 			// 
 			// txtDolarDolar
 			// 
@@ -236,7 +228,7 @@
 			this.txtDolarDolar.ReadOnly = true;
 			this.txtDolarDolar.Size = new System.Drawing.Size(129, 38);
 			this.txtDolarDolar.TabIndex = 16;
-			this.txtDolarDolar.Text = "0";
+			this.txtDolarDolar.Text = "0,00";
 			// 
 			// txtDolarPeso
 			// 
@@ -247,7 +239,7 @@
 			this.txtDolarPeso.ReadOnly = true;
 			this.txtDolarPeso.Size = new System.Drawing.Size(129, 38);
 			this.txtDolarPeso.TabIndex = 17;
-			this.txtDolarPeso.Text = "0";
+			this.txtDolarPeso.Text = "0,00";
 			// 
 			// txtPesoEuro
 			// 
@@ -258,7 +250,7 @@
 			this.txtPesoEuro.ReadOnly = true;
 			this.txtPesoEuro.Size = new System.Drawing.Size(129, 38);
 			this.txtPesoEuro.TabIndex = 18;
-			this.txtPesoEuro.Text = "0";
+			this.txtPesoEuro.Text = "0,00";
 			// 
 			// txtPesoDolar
 			// 
@@ -269,7 +261,7 @@
 			this.txtPesoDolar.ReadOnly = true;
 			this.txtPesoDolar.Size = new System.Drawing.Size(129, 38);
 			this.txtPesoDolar.TabIndex = 19;
-			this.txtPesoDolar.Text = "0";
+			this.txtPesoDolar.Text = "0,00";
 			// 
 			// txtPesoPeso
 			// 
@@ -280,9 +272,9 @@
 			this.txtPesoPeso.ReadOnly = true;
 			this.txtPesoPeso.Size = new System.Drawing.Size(129, 38);
 			this.txtPesoPeso.TabIndex = 20;
-			this.txtPesoPeso.Text = "0";
+			this.txtPesoPeso.Text = "0,00";
 			// 
-			// Form1
+			// ConversorDinero
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -310,7 +302,7 @@
 			this.Controls.Add(this.txtDolar);
 			this.Controls.Add(this.txtEuro);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-			this.Name = "Form1";
+			this.Name = "ConversorDinero";
 			this.Text = "Conversor dinero";
 			this.ResumeLayout(false);
 			this.PerformLayout();

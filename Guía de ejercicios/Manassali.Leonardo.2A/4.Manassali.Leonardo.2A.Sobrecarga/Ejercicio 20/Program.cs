@@ -31,7 +31,7 @@ namespace Ejercicio_20
 			Dolar ahorros = 10;
 			Euro euros = 100;
 			Peso ars = 100;
-			Console.WriteLine(  ((Euro)(ahorros + ars)).GetCantidad());
+			Console.WriteLine(  (ahorros + ars).GetCantidad());
 			Console.ReadLine();
 
 

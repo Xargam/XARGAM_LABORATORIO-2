@@ -11,9 +11,9 @@ using Numero;
 
 namespace Ejercicio_25
 {
-	public partial class Form1 : Form
+	public partial class ConversorNumerico : Form
 	{
-		public Form1()
+		public ConversorNumerico()
 		{
 			InitializeComponent();
 		}
@@ -25,12 +25,12 @@ namespace Ejercicio_25
 
 		private void btnDecimalBinario_Click(object sender, EventArgs e)
 		{
-			this.txtBinario.Text = Conversor.DecimalBinario(this.txtDecimalBinario.Text);
-		}
-
-		private void txtBinario_TextChanged(object sender, EventArgs e)
-		{
-
+			string binario = "NeuN";
+			if ( double.TryParse(this.txtDecimalBinario.Text, out double numeroDecimal) )
+			{
+				binario = Conversor.DecimalBinario(numeroDecimal);
+			}
+			this.txtBinario.Text = binario;
 		}
 	}
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-/*
+﻿/*
 20. Generar un nuevo proyecto del tipo Console Application.Construir tres clases dentro de un
 namespace llamado Billetes: Pesos, Euro y Dolar.
 a.Se debe lograr que los objetos de estas clases se puedan sumar, restar y comparar entre sí
@@ -23,7 +17,7 @@ sumarlos.
 h.Reutilizar el código.Sólo realizar las conversiones dentro de los operadores para dicho uso.
 */
 
-namespace Moneda
+namespace Billetes
 {
 	public class Dolar
 	{
@@ -43,10 +37,10 @@ namespace Moneda
 
 		public Dolar(double cantidad)
 		{
-			this._cantidad = cantidad; 
+			this._cantidad = cantidad;
 		}
 
-		public Dolar(double cantidad , float cotizacion ) : this(cantidad)
+		public Dolar(double cantidad, float cotizacion) : this(cantidad)
 		{
 			Dolar._cotizRespectoDolar = cotizacion;
 		}
@@ -59,26 +53,18 @@ namespace Moneda
 
 		public static explicit operator Euro(Dolar dolar)
 		{
-			Euro euros = new Euro(dolar.GetCantidad() * Euro.GetCotizacion() );
-			return euros;
+			return new Euro(dolar.GetCantidad() * Euro.GetCotizacion());
 		}
 
 		public static explicit operator Peso(Dolar dolar)
 		{
-			Peso pesos = new Peso(dolar.GetCantidad() * Peso.GetCotizacion() );
-			return pesos;
+			return new Peso(dolar.GetCantidad() * Peso.GetCotizacion());
 		}
 
 		public static implicit operator Dolar(double dolares)
 		{
-			Dolar dolar = new Dolar(dolares );
-			return dolar;
+			return new Dolar(dolares);
 		}
-
-		/*public static implicit operator double(Dolar dolares)
-		{
-			return dolares.GetCantidad();
-		}*/
 
 		#endregion
 
@@ -86,8 +72,7 @@ namespace Moneda
 
 		public static Dolar operator -(Dolar dolares, Euro euros)
 		{
-			Dolar resultado = new Dolar(dolares.GetCantidad() - ((Dolar)euros).GetCantidad() );
-			return resultado;
+			return new Dolar( (dolares + new Euro(euros.GetCantidad()*-1)).GetCantidad() );
 		}
 
 		public static Dolar operator -(Dolar dolares, Peso pesos)
@@ -97,13 +82,12 @@ namespace Moneda
 
 		public static Dolar operator +(Dolar dolares, Euro euros)
 		{
-			Dolar resultado = new Dolar(dolares.GetCantidad() + ((Dolar)euros).GetCantidad() );
-			return resultado;
+			return new Dolar(dolares.GetCantidad() + ((Dolar)euros).GetCantidad());
 		}
 
 		public static Dolar operator +(Dolar dolares, Peso pesos)
 		{
-			return dolares + (Euro)pesos; 
+			return dolares + (Euro)pesos;
 		}
 
 		#endregion
@@ -117,7 +101,7 @@ namespace Moneda
 
 		public static bool operator !=(Dolar dolares, Peso pesos)
 		{
-			return !(dolares == pesos); ;
+			return !(dolares == pesos);
 		}
 
 		public static bool operator !=(Dolar dolares, Dolar dolares2)
@@ -138,7 +122,7 @@ namespace Moneda
 		public static bool operator ==(Dolar dolares, Dolar dolares2)
 		{
 			return dolares.GetCantidad() == dolares2.GetCantidad();
-		} 
+		}
 
 		#endregion
 
@@ -154,7 +138,7 @@ namespace Moneda
 		public static float GetCotizacion()
 		{
 			return Dolar._cotizRespectoDolar;
-		} 
+		}
 
 		#endregion
 

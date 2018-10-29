@@ -57,7 +57,7 @@ namespace Grados
 
 		public static Celsius operator -(Celsius gradosC, Fahrenheit gradosF)
 		{
-			return gradosC + new Fahrenheit( gradosF.GetGrados() * -1);
+			return gradosC.GetGrados() - gradosF.GetGrados();
 		}
 
 		public static Celsius operator -(Celsius gradosC, Kelvin gradosK )
@@ -67,7 +67,7 @@ namespace Grados
 
 		public static Celsius operator +(Celsius gradosC, Fahrenheit gradosF)
 		{
-			return new Celsius(gradosC.GetGrados() + ((Celsius)gradosF).GetGrados());
+			return gradosC.GetGrados() + ((Celsius)gradosF).GetGrados();
 		}
 
 		public static Celsius operator +(Celsius gradosC, Kelvin gradosK)

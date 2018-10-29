@@ -1,6 +1,6 @@
 ﻿namespace Ejercicio_24
 {
-	partial class Form1
+	partial class ConversorGrados
 	{
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -60,7 +60,6 @@
 			this.txtFahrenheit.Size = new System.Drawing.Size(125, 38);
 			this.txtFahrenheit.TabIndex = 0;
 			this.txtFahrenheit.Text = "0";
-			this.txtFahrenheit.TextChanged += new System.EventHandler(this.txtEuro_TextChanged);
 			// 
 			// txtCelsius
 			// 
@@ -71,7 +70,6 @@
 			this.txtCelsius.Size = new System.Drawing.Size(125, 38);
 			this.txtCelsius.TabIndex = 1;
 			this.txtCelsius.Text = "0";
-			this.txtCelsius.TextChanged += new System.EventHandler(this.txtDolar_TextChanged);
 			// 
 			// txtKelvin
 			// 
@@ -82,7 +80,6 @@
 			this.txtKelvin.Size = new System.Drawing.Size(126, 38);
 			this.txtKelvin.TabIndex = 2;
 			this.txtKelvin.Text = "0";
-			this.txtKelvin.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
 			// 
 			// lblFahrenheit
 			// 
@@ -93,7 +90,6 @@
 			this.lblFahrenheit.Size = new System.Drawing.Size(124, 29);
 			this.lblFahrenheit.TabIndex = 3;
 			this.lblFahrenheit.Text = "Fahrenheit";
-			this.lblFahrenheit.Click += new System.EventHandler(this.lblEuro_Click);
 			// 
 			// lblCelcius
 			// 
@@ -104,7 +100,6 @@
 			this.lblCelcius.Size = new System.Drawing.Size(82, 29);
 			this.lblCelcius.TabIndex = 4;
 			this.lblCelcius.Text = "Celsius";
-			this.lblCelcius.Click += new System.EventHandler(this.lblDolar_Click);
 			// 
 			// lblKelvin
 			// 
@@ -115,7 +110,6 @@
 			this.lblKelvin.Size = new System.Drawing.Size(78, 29);
 			this.lblKelvin.TabIndex = 5;
 			this.lblKelvin.Text = "Kelvin";
-			this.lblKelvin.Click += new System.EventHandler(this.lblPeso_Click);
 			// 
 			// btnFahrenheit
 			// 
@@ -170,7 +164,6 @@
 			this.lblCelcius2.Size = new System.Drawing.Size(84, 29);
 			this.lblCelcius2.TabIndex = 10;
 			this.lblCelcius2.Text = "Celcius";
-			this.lblCelcius2.Click += new System.EventHandler(this.label2_Click);
 			// 
 			// lblKelvin2
 			// 
@@ -191,8 +184,7 @@
 			this.txtFahrenheitFahrenheit.ReadOnly = true;
 			this.txtFahrenheitFahrenheit.Size = new System.Drawing.Size(129, 38);
 			this.txtFahrenheitFahrenheit.TabIndex = 12;
-			this.txtFahrenheitFahrenheit.Text = "0";
-			this.txtFahrenheitFahrenheit.TextChanged += new System.EventHandler(this.txtEuroEuro_TextChanged);
+			this.txtFahrenheitFahrenheit.Text = "0,00";
 			// 
 			// txtFahrenheitCelsius
 			// 
@@ -203,7 +195,7 @@
 			this.txtFahrenheitCelsius.ReadOnly = true;
 			this.txtFahrenheitCelsius.Size = new System.Drawing.Size(129, 38);
 			this.txtFahrenheitCelsius.TabIndex = 13;
-			this.txtFahrenheitCelsius.Text = "0";
+			this.txtFahrenheitCelsius.Text = "0,00";
 			// 
 			// txtFahrenheitKelvin
 			// 
@@ -214,7 +206,7 @@
 			this.txtFahrenheitKelvin.ReadOnly = true;
 			this.txtFahrenheitKelvin.Size = new System.Drawing.Size(129, 38);
 			this.txtFahrenheitKelvin.TabIndex = 14;
-			this.txtFahrenheitKelvin.Text = "0";
+			this.txtFahrenheitKelvin.Text = "0,00";
 			// 
 			// txtCelsiusFahrenheit
 			// 
@@ -225,7 +217,7 @@
 			this.txtCelsiusFahrenheit.ReadOnly = true;
 			this.txtCelsiusFahrenheit.Size = new System.Drawing.Size(129, 38);
 			this.txtCelsiusFahrenheit.TabIndex = 15;
-			this.txtCelsiusFahrenheit.Text = "0";
+			this.txtCelsiusFahrenheit.Text = "0,00";
 			// 
 			// txtCelsiusCelcius
 			// 
@@ -236,7 +228,7 @@
 			this.txtCelsiusCelcius.ReadOnly = true;
 			this.txtCelsiusCelcius.Size = new System.Drawing.Size(129, 38);
 			this.txtCelsiusCelcius.TabIndex = 16;
-			this.txtCelsiusCelcius.Text = "0";
+			this.txtCelsiusCelcius.Text = "0,00";
 			// 
 			// txtCelsiusKelvin
 			// 
@@ -247,7 +239,7 @@
 			this.txtCelsiusKelvin.ReadOnly = true;
 			this.txtCelsiusKelvin.Size = new System.Drawing.Size(129, 38);
 			this.txtCelsiusKelvin.TabIndex = 17;
-			this.txtCelsiusKelvin.Text = "0";
+			this.txtCelsiusKelvin.Text = "0,00";
 			// 
 			// txtKelvinFahrenheit
 			// 
@@ -258,7 +250,7 @@
 			this.txtKelvinFahrenheit.ReadOnly = true;
 			this.txtKelvinFahrenheit.Size = new System.Drawing.Size(129, 38);
 			this.txtKelvinFahrenheit.TabIndex = 18;
-			this.txtKelvinFahrenheit.Text = "0";
+			this.txtKelvinFahrenheit.Text = "0,00";
 			// 
 			// txtKelvinCelsius
 			// 
@@ -269,7 +261,7 @@
 			this.txtKelvinCelsius.ReadOnly = true;
 			this.txtKelvinCelsius.Size = new System.Drawing.Size(129, 38);
 			this.txtKelvinCelsius.TabIndex = 19;
-			this.txtKelvinCelsius.Text = "0";
+			this.txtKelvinCelsius.Text = "0,00";
 			// 
 			// txtKelvinKelvin
 			// 
@@ -280,9 +272,9 @@
 			this.txtKelvinKelvin.ReadOnly = true;
 			this.txtKelvinKelvin.Size = new System.Drawing.Size(129, 38);
 			this.txtKelvinKelvin.TabIndex = 20;
-			this.txtKelvinKelvin.Text = "0";
+			this.txtKelvinKelvin.Text = "0,00";
 			// 
-			// Form1
+			// ConversorGrados
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -310,7 +302,7 @@
 			this.Controls.Add(this.txtCelsius);
 			this.Controls.Add(this.txtFahrenheit);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-			this.Name = "Form1";
+			this.Name = "ConversorGrados";
 			this.Text = "Conversor de grados";
 			this.ResumeLayout(false);
 			this.PerformLayout();
