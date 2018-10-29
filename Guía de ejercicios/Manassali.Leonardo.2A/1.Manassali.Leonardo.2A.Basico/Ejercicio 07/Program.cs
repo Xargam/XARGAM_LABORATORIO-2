@@ -16,6 +16,9 @@ namespace Ejercicio_07
 			int dia;
 			int mes;
 			int año;
+			TimeSpan diasVividos;
+			DateTime fechaNacimiento;
+			DateTime fechaActual;
 
 			Console.Title = "Ejercicio 07";
 
@@ -27,13 +30,12 @@ namespace Ejercicio_07
 			Console.Write("Año: ");
 			año = int.Parse(Console.ReadLine());
 
-			DateTime fechaNacimiento = new DateTime(año, mes, dia);
-			DateTime fechaActual = new DateTime();
+			fechaNacimiento = new DateTime(año, mes, dia);
 			fechaActual = DateTime.Now;
 
 			if (fechaNacimiento.CompareTo(DateTime.Now) < 0 && fechaNacimiento.Year > 0)
 			{
-				TimeSpan diasVividos = fechaActual - fechaNacimiento;
+				diasVividos = fechaActual - fechaNacimiento;
 				Console.WriteLine("Usted vivio {0} dias.", (Int64)diasVividos.TotalDays);
 			}
 			else

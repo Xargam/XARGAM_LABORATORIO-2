@@ -84,7 +84,6 @@ namespace Ejercicio_08
 				Console.WriteLine("Antiguedad: {0} .", antiguedad);
 				Console.WriteLine("Valor hora: {0} .", valorHora);
 				Console.WriteLine("Cobro bruto: {0} .", sueldo);
-
 				sueldo -= descuento;
 				Console.WriteLine("Descuentos: {0} .", descuento);
 				Console.WriteLine("Cobro neto: {0} .", sueldo);

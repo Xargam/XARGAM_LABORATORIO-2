@@ -17,14 +17,11 @@ namespace Ejercicio_05
 	{
 		public static void Main(string[] args)
 		{
-			Console.Title = "Ejercicio 05";
-
 			Int64 accumulatorPre = 1; //Acumula sumas desde 1 hasta el posible centro numérico - 1.
 			Int64 accumulatorPost = 0; //Acumula sumas desde el posible centro numérico + 1 en adelante.
 			bool flag = false; // Bandera que establece si se encontró algún centro numérico.
 			int number; //Número que el usuario ingresa.
 			int rango = 2; //Rango hasta el que se busca un centro numérico.
-			
 
 			Console.Title = "Ejercicio 05";
 
