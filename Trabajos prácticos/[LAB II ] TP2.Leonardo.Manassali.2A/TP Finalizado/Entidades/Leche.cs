@@ -52,7 +52,7 @@ namespace Entidades2018
 		/// <param name="color">Enumerado de colores de tipo ConsoleColor.</param>
 		/// <param name="tipo">Enumerado de tipos de tipo ETipo.</param>
 		public Leche(EMarca marca, string patente, ConsoleColor color, ETipo tipo)
-			: base(patente, marca, color)
+			: this(marca, patente,color)
 		{
 			this.tipo = tipo;
 		}
