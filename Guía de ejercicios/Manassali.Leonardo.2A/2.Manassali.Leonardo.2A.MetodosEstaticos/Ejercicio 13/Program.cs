@@ -18,7 +18,7 @@ namespace Ejercicio_13
 		{
 			string binario;
 			double numDecimal;
-			char quit = 'S';
+			char quit;
 
 			Console.Title = "Ejercicio 13";
 

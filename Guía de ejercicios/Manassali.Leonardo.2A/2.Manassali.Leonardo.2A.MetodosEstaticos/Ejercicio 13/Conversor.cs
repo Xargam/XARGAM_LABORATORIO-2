@@ -32,7 +32,6 @@ namespace Ejercicio_13
 		public static string DecimalBinario(double numero)
 		{
 			string binario;
-
 			numero = Math.Truncate(Math.Abs(numero));
 			binario = (numero == 0) ? "0" : "";
 

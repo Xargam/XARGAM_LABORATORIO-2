@@ -28,13 +28,13 @@ namespace Ejercicio_11
 
 			Console.Title = "Ejercicio 11"; 
 
-			for( int iteracion = 0; iteracion < 10; iteracion++ )
+			for( int i = 0; i < 10; i++ )
 			{
 				do
 				{
 					Console.WriteLine("Ingrese un número (-100 a 100):");
 					number = int.Parse(Console.ReadLine());
-					if(!Validacion.Validar(number, -100, 100) )
+					if(!Validacion.Validar(number, -100, 101) )
 					{
 						Console.WriteLine("ERROR: Fuera de rango.\n");
 					}
@@ -42,7 +42,7 @@ namespace Ejercicio_11
 				while (!Validacion.Validar(number, -100, 100));
 
 				acumulador += number; 
-				if( iteracion == 0)
+				if( i == 0)
 				{
 					maximo = minimo = number;
 				}
@@ -56,7 +56,7 @@ namespace Ejercicio_11
 				}
 			}
 			promedio = (float)(acumulador / 10.0);
-			Console.WriteLine("Valor máximo: {0} . Valor mínimo: {1} . Promedio {2} .", maximo , minimo , promedio);
+			Console.WriteLine("Valor máximo: {0} . Valor mínimo: {1} . Promedio {2:#,###.00} .", maximo , minimo , promedio);
 			Console.ReadLine();
 			
 		}

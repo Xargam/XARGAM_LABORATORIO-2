@@ -23,7 +23,7 @@ namespace Ejercicio_15
 			double operando2;
 			string resultado;
 			char operacion;
-			char quit = 's';
+			char quit;
 
 			Console.Title = "Ejercicio 15";
 
@@ -41,7 +41,7 @@ namespace Ejercicio_15
 				resultado = Calculadora.Calcular(operando1, operacion, operando2);
 				if( resultado == "ERROR")
 				{
-					Console.WriteLine("\n\nError.");
+					Console.WriteLine("\nError.");
 				}
 				else
 				{

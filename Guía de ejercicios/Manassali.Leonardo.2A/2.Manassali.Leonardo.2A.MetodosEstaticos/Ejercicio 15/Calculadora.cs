@@ -33,19 +33,19 @@ namespace Ejercicio_15
 			switch ( operacion )
 			{
 				case '+':
-					resultado = Convert.ToString(operando1 + operando2);
+					resultado = (operando1 + operando2).ToString();
 					break;
 				case '-':
-					resultado = Convert.ToString(operando1 - operando2);
+					resultado = (operando1 - operando2).ToString();
 					break;
 				case '*':
-					resultado = Convert.ToString(operando1 * operando2);
+					resultado = (operando1 * operando2).ToString();
 					break;
 				case '/':
 
 					if ( Validar(operando2) )
 					{
-						resultado = Convert.ToString(operando1 / operando2);
+						resultado = (operando1 / operando2).ToString();
 					}
 					break;
 			}
