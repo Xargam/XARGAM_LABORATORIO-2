@@ -26,11 +26,12 @@ namespace Ejercicio_20
 	{
 		public static void Main(string[] args)
 		{
-			Console.Title = "Ejercicio 20";
-
 			Dolar ahorros = 10;
 			Euro euros = 100;
 			Peso ars = 100;
+
+			Console.Title = "Ejercicio 20";
+
 			Console.WriteLine(  (ahorros + ars).GetCantidad());
 			Console.ReadLine();
 

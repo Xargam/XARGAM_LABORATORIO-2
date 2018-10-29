@@ -44,38 +44,33 @@ namespace Ejercicio_19
 		#endregion
 
 		#region Operadores
-
-		public static explicit operator int (Sumador sumador)
+		#region Conversion
+		public static explicit operator int(Sumador sumador)
 		{
 			return sumador._cantidadSumas;
-		}
-
+		} 
+		#endregion
 		public static long operator +(Sumador sumador1 , Sumador sumador2)
 		{
 			return (long)sumador1._cantidadSumas + sumador2._cantidadSumas;
 		}
-
 		public static bool operator |( Sumador sumador1 , Sumador sumador2)
 		{
 			return sumador1._cantidadSumas == sumador2._cantidadSumas;
 		}
-
 		#endregion
 
 		#region Metodos
-
 		public long Sumar( long a , long b )
 		{
 			this._cantidadSumas++;
 			return a + b ;
 		}
-
 		public string Sumar(string a, string b) 
 		{
 			this._cantidadSumas++;
 			return a + b;
 		}
-
 		#endregion
 	}
 }
