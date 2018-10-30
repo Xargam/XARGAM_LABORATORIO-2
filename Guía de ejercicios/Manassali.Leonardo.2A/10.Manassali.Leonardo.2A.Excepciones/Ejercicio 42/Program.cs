@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /*
 42. Crear el código necesario para lanzar una excepción DivideByZeroException en un método estático,
@@ -16,29 +12,30 @@ innerException
 
 namespace Ejercicio_42
 {
-  public class Program
-  {
-    static void Main(string[] args)
-    {
-      try
-      {
-        MiClase3 obj = new MiClase3();
-        obj.MetodoDeInstancia();
-      }
-      catch(Exception e)
-      {
-        Console.WriteLine("Mensajes de error: {0}",e.Message);
-      }
-      finally
-      {
-        Console.ReadKey();
-      }
-      
-    }
+	public class Program
+	{
+		private static void Main(string[] args)
+		{
+			Console.Title = "Ejercicio 42";
+			try
+			{
+				MiClase3 obj = new MiClase3();
+				obj.MetodoDeInstancia();
+			}
+			catch ( Exception e )
+			{
+				Console.WriteLine("Mensajes de error: {0}", e.Message);
+			}
+			finally
+			{
+				Console.ReadKey();
+			}
 
-    public static void MiMetodo()
-    {
-        throw new DivideByZeroException();
-    }
-  }
+		}
+
+		public static void MiMetodo()
+		{
+			throw new DivideByZeroException();
+		}
+	}
 }

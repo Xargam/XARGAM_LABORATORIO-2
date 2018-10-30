@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -64,10 +64,10 @@ namespace CentralitaHerencia
 			{
 				c.AgregarLlamada(nuevaLlamada);
 			}
-      else
-      {
-        throw new CentralitaException("ERROR: Llamada duplicada.", ((object)c).ToString() , "public static Centralita operator +(Centralita c , Llamada nuevaLlamada){...}");
-      }
+			else
+			{
+				throw new CentralitaException("Se intento agregar un elemento clonado a lista.", nuevaLlamada.GetType().Name, "public static Centralita operator +(Centralita,Llamada){...}");
+			}
 			return c;
 		}
 		#endregion
