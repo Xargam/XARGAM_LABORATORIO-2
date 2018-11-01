@@ -17,12 +17,12 @@ namespace Ejercicio_26
 			Random numAleatorio = new Random();
 
 			Console.Title = "Ejercicio 26";
-			Console.WriteLine("El vector inicial:");
-			for ( int i = 0 ; i < vector.Length ; i++ )
+			for (int i = 0; i < vector.Length; i++)
 			{
 				valor = numAleatorio.Next(-1000, 1001);
 				vector[i] = (valor == 0) ? 1 : valor;
 			}
+			Console.WriteLine("El vector inicial:");
 			Program.MostrarVector(vector);
 
 			Console.WriteLine("Ordenamiento decreciente de los positivos:");
