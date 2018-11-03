@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>ClasesInstanciables</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clases Abstractas\Clases Abstractas.csproj" />
+    <ProjectReference Include="..\Excepciones\Excepciones.csproj" />
+  </ItemGroup>
+
+</Project>
