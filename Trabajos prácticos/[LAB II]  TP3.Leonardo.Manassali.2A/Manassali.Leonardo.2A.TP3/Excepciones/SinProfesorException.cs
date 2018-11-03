@@ -7,9 +7,8 @@ namespace Excepciones
 	public class SinProfesorException : Exception
 	{
 		#region Constructor
-		public SinProfesorException()
+		public SinProfesorException() : base("No hay un profesor que dicte la clase.")
 		{
-
 		}
 		#endregion
 	}

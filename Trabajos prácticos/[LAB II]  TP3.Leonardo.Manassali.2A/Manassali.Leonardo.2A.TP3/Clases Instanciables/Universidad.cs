@@ -182,6 +182,10 @@ namespace ClasesInstanciables
 			{
 				u.Alumnos.Add(a);
 			}
+			else
+			{
+				throw new AlumnoRepetidoException();
+			}
 			return u;
 		}
 		public static Universidad operator +(Universidad u, Profesor i)

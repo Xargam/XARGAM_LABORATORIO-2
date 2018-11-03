@@ -109,7 +109,7 @@ namespace EntidadesAbstractas
 		{
 			if ((nacionalidad == ENacionalidad.Argentino && (dato > 89999999 || dato < 1)) || (nacionalidad == ENacionalidad.Extranjero && (dato > 99999999 || dato < 90000000)))
 			{
-				throw new NacionalidadInvalidaException("Se intentó ingresar un DNI para un objeto de tipo Persona fuera del rango de valores admitido. Este intervalo permitido va de 1 a 89999999 inclusive para nacionalidad Argentina y de 90000000 a 99999999 inclusive para nacionalidad extranjera.");
+				throw new NacionalidadInvalidaException("El número de DNI no coincide para la nacionalidad o es invalido.");
 			}
 			return dato;
 		}
@@ -121,7 +121,7 @@ namespace EntidadesAbstractas
 			}
 			else
 			{
-				throw new DniInvalidoException("Errores de formato en DNI. Un DNI es numérico y consta de 1 a 8 dígitos para argentinos u 8 digitos para extranjeros.");
+				throw new DniInvalidoException("El DNI posee un error de formato.");
 			}
 			return dni;
 		}
