@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>ClasesAbstractas</RootNamespace>
+    <RootNamespace>EntidadesAbstractas</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

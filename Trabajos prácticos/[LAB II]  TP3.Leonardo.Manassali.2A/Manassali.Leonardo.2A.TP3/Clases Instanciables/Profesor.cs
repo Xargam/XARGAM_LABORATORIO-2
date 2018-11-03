@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using ClasesAbstractas;
+using EntidadesAbstractas;
 using ClasesInstanciables;
 
 namespace ClasesInstanciables

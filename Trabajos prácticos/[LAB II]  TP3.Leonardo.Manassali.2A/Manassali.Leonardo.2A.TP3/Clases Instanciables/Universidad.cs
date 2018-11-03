@@ -56,12 +56,15 @@ namespace ClasesInstanciables
 				}
 			}
 		}
+		#endregion
+
+		#region Indexadores
 		public Jornada this[int i]
 		{
 			get
 			{
 				Jornada jornada = null;
-				if( i >= 0 && i < this.jornada.Count)
+				if (i >= 0 && i < this.jornada.Count)
 				{
 					jornada = this.jornada[i];
 				}
@@ -160,15 +163,34 @@ namespace ClasesInstanciables
 		#region Aritmeticos
 		public static Universidad operator +(Universidad g, EClases clase)
 		{
-			return new Universidad();
+			Profesor profesor = g == clase;
+			Jornada jornada = new Jornada(clase, profesor);
+
+			foreach (Alumno item in g.Alumnos)
+			{
+				if(item == clase)
+				{
+					jornada += item;
+				}
+			}
+			g.Jornadas.Add(jornada);
+			return g;
 		}
 		public static Universidad operator +(Universidad u, Alumno a)
 		{
-			return new Universidad();
+			if(u != a)
+			{
+				u.Alumnos.Add(a);
+			}
+			return u;
 		}
 		public static Universidad operator +(Universidad u, Profesor i)
 		{
-			return new Universidad();
+			if (u != i)
+			{
+				u.profesores.Add(i);
+			}
+			return u;
 		}
 		#endregion
 
@@ -178,15 +200,31 @@ namespace ClasesInstanciables
 		#region Metodos
 		public override string ToString()
 		{
-			return base.ToString();
+			return Universidad.MostrarDatos(this);
 		}
 		public bool Guardar(Universidad uni)
 		{
 			return true;
 		}
-		private string MostrarDatos(Universidad uni)
+		private static string MostrarDatos(Universidad uni)
 		{
-			return "";
+			StringBuilder datos = new StringBuilder();
+			datos.AppendLine("Profesores:");
+			foreach (Profesor item in uni.Instructores)
+			{
+				datos.AppendLine(item.ToString());
+			}
+			datos.AppendLine("Alumnos:");
+			foreach (Alumno item in uni.Alumnos)
+			{
+				datos.AppendLine(item.ToString());
+			}
+			datos.AppendLine("Jornadas:");
+			foreach (Jornada item in uni.Jornadas)
+			{
+				datos.AppendLine(item.ToString());
+			}
+			return datos.ToString();
 		}
 		#endregion
 

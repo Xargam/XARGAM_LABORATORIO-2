@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace ClasesAbstractas
+namespace EntidadesAbstractas
 {
 	public abstract class Universitario : Persona
 	{

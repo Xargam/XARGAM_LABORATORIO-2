@@ -2,10 +2,10 @@
 
 namespace Excepciones
 {
-	public class ArchivosExeption : Exception
+	public class ArchivosException : Exception
 	{
 		#region Constructor
-		public ArchivosExeption(Exception innerException)
+		public ArchivosException(Exception innerException)
 		{
 
 		}

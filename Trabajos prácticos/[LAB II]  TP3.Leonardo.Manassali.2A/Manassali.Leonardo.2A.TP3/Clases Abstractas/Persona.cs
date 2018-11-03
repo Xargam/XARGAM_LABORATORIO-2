@@ -1,7 +1,7 @@
 ﻿using Excepciones;
 using System.Text;
 
-namespace ClasesAbstractas
+namespace EntidadesAbstractas
 {
 	//	Abstracta, con los atributos Nombre, Apellido, Nacionalidad y DNI.
 	// Se deberá validar que el DNI sea correcto, teniendo en cuenta su nacionalidad.Argentino entre 1 y
@@ -83,15 +83,16 @@ namespace ClasesAbstractas
 		}
 		public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
 		{
-
+			this.Nombre = nombre;
+			this.Apellido = apellido;
+			this.Nacionalidad = nacionalidad;
 		}
-		public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad)
+		public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad) : this(nombre,apellido,dni.ToString(),nacionalidad)
 		{
-
 		}
-		public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
+		public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad) : this(nombre,apellido,nacionalidad)
 		{
-
+			this.StringToDNI = dni;
 		}
 		#endregion
 
