@@ -39,9 +39,8 @@ namespace Entidades2018
 		/// <param name="patente">Codigo de barras del producto.</param>
 		/// <param name="color">Enumerado de colores de tipo ConsoleColor.</param>
 		public Leche(EMarca marca, string patente, ConsoleColor color)
-			: base(patente, marca, color)
+			: this(marca, patente, color, ETipo.Entera)
 		{
-			this.tipo = Leche.ETipo.Entera;
 		}
 
 		/// <summary>
@@ -52,7 +51,7 @@ namespace Entidades2018
 		/// <param name="color">Enumerado de colores de tipo ConsoleColor.</param>
 		/// <param name="tipo">Enumerado de tipos de tipo ETipo.</param>
 		public Leche(EMarca marca, string patente, ConsoleColor color, ETipo tipo)
-			: this(marca, patente,color)
+			: base(patente,marca,color)
 		{
 			this.tipo = tipo;
 		}
