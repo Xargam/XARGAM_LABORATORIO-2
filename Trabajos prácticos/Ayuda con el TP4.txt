@@ -1,0 +1,5 @@
+public string MostrarDatos(IMostrar<List<Paquete>> elementos)
+{
+   List<Paquete> l = (List<Paquete>)((Correo)elementos).paquetes;
+   // Su código       
+}
