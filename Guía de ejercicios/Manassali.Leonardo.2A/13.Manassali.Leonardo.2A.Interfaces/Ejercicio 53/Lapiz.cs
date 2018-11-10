@@ -32,7 +32,7 @@ namespace Ejercicio_53
             }
             set
             {
-                this._tamanioMina = (value > 0)? value : 0 ;
+                this._tamanioMina = value;
             }
         }
         #endregion
@@ -40,7 +40,7 @@ namespace Ejercicio_53
         #region Constructor
         public Lapiz(int unidades)
         {
-            this._tamanioMina = (unidades > 0)? unidades : 0;
+            this._tamanioMina = unidades;
         }
 
        

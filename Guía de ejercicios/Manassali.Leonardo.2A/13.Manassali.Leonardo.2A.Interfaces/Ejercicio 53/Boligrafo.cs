@@ -35,7 +35,7 @@ namespace Ejercicio_53
             }
             set
             {
-                this._tinta = (value > 0)? value : 0;
+                this._tinta = value;
             }
         }
         #endregion
@@ -44,10 +44,9 @@ namespace Ejercicio_53
         public Boligrafo(int unidades , ConsoleColor color)
         {
             this.Color = color;
-            this.UnidadesDeEscritura = (unidades > 0)? unidades : 0 ;
+            this.UnidadesDeEscritura =  unidades ;
         }
         #endregion
-
 
         #region Metodos
         public EscrituraWrapper Escribir(string texto)

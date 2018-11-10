@@ -11,8 +11,8 @@ namespace Ejercicio_52
         static void Main(string[] args)
         {
             ConsoleColor colorOriginal = Console.ForegroundColor;
-            Lapiz miLapiz = new Lapiz(-2);
-            Boligrafo miBoligrafo = new Boligrafo(-2, ConsoleColor.Green);
+            Lapiz miLapiz = new Lapiz(-55);
+            Boligrafo miBoligrafo = new Boligrafo(2, ConsoleColor.Green);
             EscrituraWrapper eLapiz = ((IAcciones)miLapiz).Escribir("hola mundo como estan?");
             Console.ForegroundColor = eLapiz.color;
             Console.WriteLine(eLapiz.texto);
@@ -23,7 +23,8 @@ namespace Ejercicio_52
             Console.WriteLine(eBoligrafo.texto);
             Console.ForegroundColor = colorOriginal;
             Console.WriteLine(miBoligrafo);
-            Console.ReadKey();
+            Console.ReadKey();
+
         }
     }
 }

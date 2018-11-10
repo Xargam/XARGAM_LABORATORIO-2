@@ -44,10 +44,9 @@ namespace Ejercicio_52
         public Boligrafo(int unidades , ConsoleColor color)
         {
             this.Color = color;
-            this.UnidadesDeEscritura = unidades;
+            this.UnidadesDeEscritura = unidades ;
         }
         #endregion
-
 
         #region Metodos
         public EscrituraWrapper Escribir(string texto)
@@ -64,8 +63,12 @@ namespace Ejercicio_52
 
         public bool Recargar(int unidades)
         {
-            this.UnidadesDeEscritura += unidades;
-            return this.UnidadesDeEscritura >= 0;
+            bool sePudoRecargar = this.UnidadesDeEscritura + unidades >= 0;
+            if (sePudoRecargar)
+            {
+                this.UnidadesDeEscritura += unidades;
+            }
+            return sePudoRecargar;
         }
 
         public override string ToString()

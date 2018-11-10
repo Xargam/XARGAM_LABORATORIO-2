@@ -1,34 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Ejercicio_53
 {
-    public class Cartuchera1 
+    public class Cartuchera1
     {
-        #region Atributos
-        private List<IAcciones> _obj;
+        #region Propiedades
+        public List<IAcciones> Acciones
+        {
+            get;
+            set;
+        }
+        #endregion
+
+        #region Constructor
+        public Cartuchera1()
+        {
+            this.Acciones = new List<IAcciones>();
+        }
         #endregion
 
         #region Metodos
-        public bool ProbarElementos(List<IAcciones> acciones)
+        public bool ProbarElementos()
         {
             bool verificacion = true;
-            foreach (IAcciones item in acciones)
+            foreach (IAcciones item in this.Acciones)
             {
                 item.UnidadesDeEscritura -= 1;
-                if (item.UnidadesDeEscritura < 0)
+                if ( item.UnidadesDeEscritura < 0)
                 {
+                    item.UnidadesDeEscritura = 0;
                     verificacion = false;
-                    try
-                    {
-                        item.Recargar(1);
-                    }
-                    catch (Exception)
-                    {
-                    }
                     break;
                 }
             }

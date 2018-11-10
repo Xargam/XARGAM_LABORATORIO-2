@@ -32,7 +32,7 @@ namespace Ejercicio_52
             }
             set
             {
-                this._tamanioMina = value;
+                this._tamanioMina = value ;
             }
         }
         #endregion
