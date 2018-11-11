@@ -7,7 +7,7 @@
     <ProjectGuid>{BEBD9454-F393-4638-8727-A5C0610502D9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Ejercicio_42</RootNamespace>
-    <AssemblyName>Ejercicio 54</AssemblyName>
+    <AssemblyName>Ejercicio 42</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,12 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\14.Manassali.Leonardo.2A.ArchivosDeTexto\IO\IO.csproj">
-      <Project>{b32e9112-63a6-4989-9efa-e2e85209b07f}</Project>
-      <Name>IO</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio_54
+namespace Ejercicio_42
 {
   public class UnaExepcion : Exception
   {

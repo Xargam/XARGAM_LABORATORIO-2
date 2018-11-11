@@ -1,5 +1,5 @@
 using System;
-using IO;
+
 
 /*
 42. Crear el código necesario para lanzar una excepción DivideByZeroException en un método estático,
@@ -11,14 +11,13 @@ error que esta almacena y los mensajes de todas las excepciones almacenadas en s
 innerException
 */
 
-namespace Ejercicio_54
+namespace Ejercicio_42
 {
     public class Program
     {
         private static void Main(string[] args)
         {
-            Console.Title = "Ejercicio 54";
-            string ruta = "";
+            Console.Title = "Ejercicio 42";
 
             try
             {
@@ -27,12 +26,11 @@ namespace Ejercicio_54
             }
             catch (Exception e)
             {
-                ruta = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + DateTime.Now.ToString("yyyyMMdd-hhmm") + ".txt";
-                ArchivoTexto.Guardar(ruta, e.Message);
+                Console.WriteLine(e.Message);
             }
-            Console.WriteLine(ArchivoTexto.Leer(ruta));
             Console.ReadKey();
         }
+
         public static void MiMetodo()
         {
             throw new DivideByZeroException();

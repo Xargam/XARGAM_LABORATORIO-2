@@ -7,7 +7,7 @@ namespace Ejercicio_55
 	{
 		private static void Main(string[] args)
 		{
-			Console.Title = "Ejercicio 41 - Console";
+			Console.Title = "Ejercicio 55";
 			//Mi central
 			Centralita c = new Centralita("Fede Center");
 			//Mis 4 llamadas
