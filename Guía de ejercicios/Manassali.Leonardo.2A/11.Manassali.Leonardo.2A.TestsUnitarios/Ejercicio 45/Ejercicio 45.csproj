@@ -56,7 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ejercicio42Libreria\Ejercicio42Libreria.csproj">
-      <Project>{9e0479f2-78e8-47f3-adbd-eb8a8dbc89d0}</Project>
+      <Project>{41d88117-1f45-4620-8f51-cf1d76eee6ce}</Project>
       <Name>Ejercicio42Libreria</Name>
     </ProjectReference>
   </ItemGroup>

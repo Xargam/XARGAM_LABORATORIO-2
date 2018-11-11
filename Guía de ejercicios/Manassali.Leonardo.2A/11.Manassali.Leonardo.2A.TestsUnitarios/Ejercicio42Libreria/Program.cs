@@ -12,30 +12,30 @@ innerException
 
 namespace Ejercicio42Libreria
 {
-	//Funcion main adaptada para poder ser llamada como si fuera un metodo y asi ser testeada en el ejercicio 45.
-	public class Program
-	{
-		public static void MainFunctionAdapted()
-		{
-			Console.Title = "Ejercicio 42";
-			try
-			{
-				MiClase3 obj = new MiClase3();
-				obj.MetodoDeInstancia();
-			}
-			catch ( Exception e )
-			{
-				//Console.WriteLine("Mensajes de error: {0}", e.Message);
-			}
-			finally
-			{
-				//Console.ReadKey();
-			}
-		}
+    //Funcion main adaptada para poder ser llamada como si fuera un metodo y asi ser testeada en el ejercicio 45.
+    public class Program
+    {
+        public static void MainFunctionAdapted()
+        {
+            Console.Title = "Ejercicio 42";
+            try
+            {
+                MiClase3 obj = new MiClase3();
+                obj.MetodoDeInstancia();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Mensajes de error: {0}", e.Message);
+            }
+            finally
+            {
+                Console.ReadKey();
+            }
+        }
 
-		public static void MiMetodo()
-		{
-			throw new DivideByZeroException();
-		}
-	}
+        public static void MiMetodo()
+        {
+            throw new DivideByZeroException();
+        }
+    }
 }
