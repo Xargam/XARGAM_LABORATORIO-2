@@ -34,16 +34,19 @@ namespace Ejercicio_68
             string mensaje = "La persona se actualizó";
             if (object.Equals(this._persona , null))
             {
+                Persona persona = new Persona("", "");
                 mensaje = "Se ha creado la persona.";
                 this.btnCrear.Text = "Actualizar";
+                this._persona = persona;
             }
             else if(this._persona.Apellido == this.txtApellido.Text && this._persona.Nombre == this.txtNombre.Text)
             {
                 mensaje = "La persona fue recargada sin alteraciones.";
             }
-            Persona persona = new Persona(this.txtNombre.Text, this.txtApellido.Text);
-            this._personaCreada(mensaje + "\r\n" + persona.Mostrar());
-            this._persona = persona;
+            this._persona.Nombre = this.txtNombre.Text;
+            this._persona.Apellido = this.txtApellido.Text;
+            this._personaCreada(mensaje + "\r\n" + this._persona.Mostrar());
+           
 
         }
         #endregion
