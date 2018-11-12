@@ -16,9 +16,10 @@ namespace Ejercicio_55
 			Local l3 = new Local("Lanús", 45, "San Rafael", 1.99f);
 			Provincial l4 = new Provincial(Provincial.Franja.Franja_1, l2);
 
-			//Las llamadas se irán registrando en la Centralita.
-			//La centralita mostrará por pantalla todas las llamadas según las vaya registrando.
-			try
+            //Las llamadas se irán registrando en la Centralita.
+            //La centralita mostrará por pantalla todas las llamadas según las vaya registrando.
+            c.RutaDelArchivo = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Centralita bitacora.txt";
+            try
 			{
 				c += l1;
 				Console.WriteLine(c.ToString());
@@ -36,6 +37,7 @@ namespace Ejercicio_55
 			{
 				Console.WriteLine("Llamada ya registrada en el sistema.");
 			}
+            
             Console.WriteLine(c.Leer());
             Console.ReadKey();
 

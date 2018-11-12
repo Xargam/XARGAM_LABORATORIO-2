@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Ejercicio_55
+namespace Ejercicio_59
 {
     public class Centralita : IGuardar<string>
     {
@@ -32,8 +32,8 @@ namespace Ejercicio_55
 
         public string RutaDelArchivo
         {
-            set;
             get;
+            set;
         }
         #endregion
 
@@ -157,7 +157,7 @@ namespace Ejercicio_55
 
         public bool Guardar()
         {
-            StreamWriter archivo = new StreamWriter(this.RutaDelArchivo, true);
+            StreamWriter archivo = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Centralita bitacora.txt", true);
             archivo.WriteLine(DateTime.Now.ToString("dddd dd \\de MMMM \\de yyyy hh:mm\\h\\s") + " - Se realizo una llamada");
             archivo.Close();
             return true;
@@ -166,7 +166,7 @@ namespace Ejercicio_55
         public string Leer()
         {
             string datos = "";
-            StreamReader archivo = new StreamReader(this.RutaDelArchivo);
+            StreamReader archivo = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Centralita bitacora.txt");
             datos = archivo.ReadToEnd();
             archivo.Close();
             return datos;
