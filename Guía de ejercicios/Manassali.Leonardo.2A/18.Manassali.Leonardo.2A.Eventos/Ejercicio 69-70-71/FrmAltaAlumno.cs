@@ -46,8 +46,16 @@ namespace Ejercicio_69
             }
             if (verif)
             {
-                Alumno alumno = new Alumno(this.txtNombre.Text, this.txtApellido.Text, int.Parse(this.txtDni.Text), this._imagenPath);
-                ((FrmPrincipal)this.Owner).miAlumno.Invoke(alumno);
+                try
+                {
+                    Alumno alumno = new Alumno(this.txtNombre.Text, this.txtApellido.Text, int.Parse(this.txtDni.Text), this._imagenPath);
+                    ((FrmPrincipal)this.Owner).miAlumno.Invoke(alumno);
+                }
+                catch (Exception)
+                {
+
+                }
+                
             }
             
         }
