@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>operador +</Title>
+      <Shortcut>masOP</Shortcut>
+      <Description>Fragmento de código para sobrecarga del operador +</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>retorno</ID>
+          <ToolTip>tipo de retorno</ToolTip>
+          <Default>Object</Default>
+        </Literal>
+        <Literal>
+          <ID>tipo1</ID>
+          <ToolTip>tipo de param 1</ToolTip>
+          <Default>Object</Default>
+        </Literal>
+        <Literal>
+          <ID>nombre1</ID>
+          <ToolTip>nombre de param 1</ToolTip>
+          <Default>variable1</Default>
+        </Literal>
+        <Literal>
+          <ID>tipo2</ID>
+          <ToolTip>tipo de param 2</ToolTip>
+          <Default>Object</Default>
+        </Literal>
+        <Literal>
+          <ID>nombre2</ID>
+          <ToolTip>nombre de param 2</ToolTip>
+          <Default>variable2</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public static $retorno$ operator +($tipo1$ $nombre1$ , $tipo2$ $nombre2$  )
+        {
+           
+            /*
+            if( $nombre1$ != $nombre2$ )
+            {
+                $nombre1$._lista.Add($nombre2$)
+            }
+            */
+            return $nombre1$;
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

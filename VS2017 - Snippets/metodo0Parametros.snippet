@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Method</Title>
+      <Shortcut>method0P</Shortcut>
+      <Description>Fragmento de código para metodo</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>modificador</ID>
+          <ToolTip>Visibilidad</ToolTip>
+          <Default>public</Default>
+        </Literal>
+		<Literal>
+          <ID>modificador2</ID>
+          <ToolTip>comportamiento</ToolTip>
+          <Default>static</Default>
+        </Literal>
+        <Literal>
+          <ID>tipo</ID>
+          <ToolTip>Retorno del metodo</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>MetodoNombre</ID>
+          <ToolTip>Nombre del metodo</ToolTip>
+          <Default>Mostrar</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$modificador$ $modificador2$ $tipo$ $MetodoNombre$()
+        {
+        
+            return ($tipo$)new object() ;
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Method</Title>
+      <Shortcut>method1P</Shortcut>
+      <Description>Fragmento de código para metodo con un parametro</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>modificador</ID>
+          <ToolTip>Visibilidad</ToolTip>
+          <Default>public</Default>
+        </Literal>
+		<Literal>
+          <ID>modificador2</ID>
+          <ToolTip>comportamiento2</ToolTip>
+          <Default>static</Default>
+        </Literal>
+        <Literal>
+          <ID>tipo</ID>
+          <ToolTip>Retorno del metodo</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>MetodoNombre</ID>
+          <ToolTip>Nombre del metodo</ToolTip>
+          <Default>Mostrar</Default>
+        </Literal>
+        <Literal>
+          <ID>tipoParam1</ID>
+          <ToolTip>Tipo de dato del primer parámetro</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>nombreParam1</ID>
+          <ToolTip>Nombre del parámetro 1</ToolTip>
+          <Default>variable1</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$modificador$ $modificador2$ $tipo$ $MetodoNombre$($tipoParam1$ $nombreParam1$)
+        {
+        
+            return ($tipo$)new object() ;
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Serializar en XML</Title>
+      <Shortcut>xmlguardar</Shortcut>
+      <Description>Fragmento de código para serializar en un archivo XML</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>mod1</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>mod2</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>static</Default>
+        </Literal>
+        <Literal>
+          <ID>retorno</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>bool</Default>
+        </Literal>
+        <Literal>
+          <ID>nombreMetodo</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>GuardarXML</Default>
+        </Literal>
+        <Literal>
+          <ID>tipoDato</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>nombreVar</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>variable1</Default>
+        </Literal>
+        <Literal>
+          <ID>ruta</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>path</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$mod1$ $mod2$ $retorno$ $nombreMetodo$($tipoDato$ $nombreVar$ , string $ruta$)
+        {
+            XmlTextWriter archivo = new XmlTextWriter($ruta$ , Encoding.UTF8);
+            XmlSerializer xml = new XmlSerializer(typeof($tipoDato$));
+            xml.Serialize(archivo, $nombreVar$);
+            archivo.Close();
+            return true;
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

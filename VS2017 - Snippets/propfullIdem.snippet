@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>propiedad bien identada</Title>
+      <Shortcut>propfullIdem</Shortcut>
+      <Description>Fragmento de código para propiedades bien identadas</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>tipo</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>nombre</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>atributo</Default>
+        </Literal>
+        <Literal>
+          <ID>atributo</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>atributo</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private $tipo$ _$atributo$;
+        
+        public $tipo$ $nombre$
+        {
+            get
+            {
+                return this._$atributo$;
+            }
+            set
+            {
+                this._$atributo$ = value;
+            }
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

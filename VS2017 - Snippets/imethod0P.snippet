@@ -2,9 +2,9 @@
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
-      <Title>Method</Title>
-      <Shortcut>methodStatic</Shortcut>
-      <Description>Fragmento de código para metodo</Description>
+      <Title>metodo de interfaz</Title>
+      <Shortcut>Imethod0P</Shortcut>
+      <Description>Fragmento de código para region personalizada</Description>
       <Author>Xargam</Author>
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
@@ -14,16 +14,18 @@
     <Snippet>
       <Declarations>
         <Literal>
-          <ID>name</ID>
+          <ID>retorno</ID>
           <ToolTip>Nombre de clase</ToolTip>
-          <Default>MyClass</Default>
+          <Default>bool</Default>
+        </Literal>
+        <Literal>
+          <ID>nombre</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>Metodo</Default>
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[public static string Metodo(  )
-        {
-            return "";
-        }]]>
+        <![CDATA[$retorno$ $nombre$();$end$]]>
       </Code>
     </Snippet>
   </CodeSnippet>

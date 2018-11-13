@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Deserializar en XML</Title>
+      <Shortcut>xmlabrir</Shortcut>
+      <Description>Fragmento de código para serializar en un archivo XML</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>mod1</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>public</Default>
+        </Literal>
+        <Literal>
+          <ID>mod2</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>static</Default>
+        </Literal>
+        <Literal>
+          <ID>retorno</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>nombreMetodo</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>LeerXML</Default>
+        </Literal>
+        <Literal>
+          <ID>ruta</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>path</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[$mod1$ $mod2$ $retorno$ $nombreMetodo$(string $ruta$)
+        {
+            XmlTextReader archivo = new XmlTextReader($ruta$);
+            XmlSerializer xml = new XmlSerializer(typeof($retorno$));
+            $retorno$ obj = ($retorno$)xml.Deserialize(archivo);
+            archivo.Close();
+            return obj;
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

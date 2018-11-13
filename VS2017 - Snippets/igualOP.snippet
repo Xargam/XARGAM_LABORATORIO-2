@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>operador == y !=</Title>
+      <Shortcut>igualOP</Shortcut>
+      <Description>Fragmento de código para operador == y !=</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>retorno</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>bool</Default>
+        </Literal>
+        <Literal>
+          <ID>tipo1</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>variable1</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>obj1</Default>
+        </Literal>
+        <Literal>
+          <ID>tipo2</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>variable2</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>obj2</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public static $retorno$ operator ==($tipo1$ $variable1$ , $tipo2$ $variable2$)
+        {
+            bool verificacion = false; 
+            /*
+            foreach($tipo2$ item in $variable1$._lista)
+            {
+                if( item == $variable2$ )
+                {
+                    verificacion = true;
+                    break;
+                }
+            }
+            */
+            return true;
+        }
+        public static $retorno$ operator !=($tipo1$ $variable1$ , $tipo2$ $variable2$)
+        {
+            return !($variable1$ == $variable2$);
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

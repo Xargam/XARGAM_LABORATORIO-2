@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Archivo TXT abrir</Title>
+      <Shortcut>txtabrir</Shortcut>
+      <Description>Fragmento de código para metodo que lee datos de txt</Description>
+      <Author>Erika</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>path</ID>
+          <ToolTip>nombre de la variable</ToolTip> 
+          <Default>ruta</Default> 
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public string Leer(string $path$ )
+        {
+            StreamReader archivo = new StreamReader($path$);
+            string datos = archivo.ReadToEnd();
+            archivo.Close();
+            return datos;
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

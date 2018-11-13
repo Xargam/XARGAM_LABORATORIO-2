@@ -1,20 +1,37 @@
 ﻿using System;
 using System.Text;
+using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
+using System.Xml;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Threading;
+using System.Data.SqlClient;
+using System.Data;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace BitConverter
 {
-	internal class Program
+    public delegate bool MiDelegado();
+
+    internal class Program
 	{
-		private static void Main(string[] args)
-		{
-			string pattern = "Marca:\\s|Color:\\s|Cantidad:\\s|\\s\\s\\s{1}";
-			string[] array = System.Text.RegularExpressions.Regex.
-			foreach (string pal in array)
-			{
-				Console.WriteLine(pal);
-			}
-			
-			Console.ReadLine();
-		}
-	}
+
+        public static event MiDelegado Eventooo;
+        public static void Main(string[] args)
+        {
+            Eventooo += new MiDelegado(new Program().Metodo);
+            Program.Eventooo();
+        }
+
+
+
+        public   bool Metodo()
+        {
+            Console.WriteLine(true);
+            Console.ReadKey();
+            return true;
+        }
+    }
 }

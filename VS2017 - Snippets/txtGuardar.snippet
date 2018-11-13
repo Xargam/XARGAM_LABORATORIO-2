@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Archivo TXT guardar</Title>
+      <Shortcut>txtguardar</Shortcut>
+      <Description>Fragmento de código para metodo que almacena datos en txt</Description>
+      <Author>Erika</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>tipo</ID>
+          <ToolTip>Tipo de retorno del metodo</ToolTip> 
+          <Default>bool</Default> 
+        </Literal>
+        <Literal>
+          <ID>path</ID>
+          <ToolTip>Nombre de la variable</ToolTip>
+          <Default>ruta</Default>
+        </Literal>
+        <Literal>
+          <ID>contenido</ID>
+          <ToolTip>Nombre de la variable</ToolTip>
+          <Default>contenido</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public $tipo$ Guardar(string $path$ , string $contenido$)
+        {
+            StreamWriter archivo = new StreamWriter($path$);
+            archivo.WriteLine($contenido$);
+            archivo.Close();
+            return true;
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

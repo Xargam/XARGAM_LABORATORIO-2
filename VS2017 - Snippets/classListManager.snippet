@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Class Template</Title>
+      <Shortcut>classListManagerTemp</Shortcut>
+      <Description>Fragmento de código para plantilla de clase administradora de listas</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>MyClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+        #region Atributos
+        private List<char> _lista;
+        #endregion
+        
+        #region Propiedades
+        public List<char> Atributo
+        {
+            get
+            {
+                return this._lista;
+            }
+            set
+            {
+                this._lista = value;
+            }
+        }
+        #endregion
+        
+        #region Constructores
+        
+        #endregion
+        
+        #region Operadores
+        
+        #region Comparacion
+        /*public static bool operator ==( string oneDimensionData ,char data )
+        {
+            bool verificacion = false;
+            foreach(char item in oneDimensionData)
+            {
+                if(item == data)
+                {
+                    verificacion = true;
+                    break;
+                }
+            }
+            return verificacion;
+        }
+        public static bool operator !=(string oneDimensionData, char data)
+        {
+            return !(oneDimensionData == data);
+        }*/
+        #endregion
+        
+        #region Aritmeticos
+        /*public static string operator +(string oneDimensionData, char data)
+        {
+            if (oneDimensionData != data)
+            {
+            }
+            return oneDimensionData;
+        }*/
+        #endregion
+        
+        #endregion
+        
+        #region Metodos
+        public override string ToString()
+        {
+            StringBuilder datos = new StringBuilder();
+            datos.AppendFormat("{0}  {1}");
+            datos.AppendLine("");
+            return datos.ToString();
+        }
+        #endregion$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
