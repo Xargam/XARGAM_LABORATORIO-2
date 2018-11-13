@@ -1,1 +1,3 @@
 Herramietas - Teclado - Editar.Duplicar --> Asignar Ctrl + d
+
+SQL Management Studio
