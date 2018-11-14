@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>isNull</Title>
+      <Shortcut>isnull</Shortcut>
+      <Description>Fragmento de código para comparar objetos con null</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>argumento</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>this</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[if(object.Equals($argumento$ , null ) )
+        {
+            
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

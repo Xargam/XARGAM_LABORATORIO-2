@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Sql read</Title>
+      <Shortcut>sqlRead</Shortcut>
+      <Description>Fragmento de código para leer base de datos</Description>
+      <Author>Xargam</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+        <SnippetType>SurroundsWith</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Nombre de clase</ToolTip>
+          <Default>MyClass</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[SqlConnection conexion = new SqlConnection(Properties.Settings.Default.conexion);
+            SqlCommand comando = new SqlCommand();
+            conexion.Open();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "SELECT * FROM dbo.Televisores"; //Selecciona todas las tablas.
+            comando.Connection = conexion;
+            SqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                //new Televisor(reader.GetInt32(0), reader.GetString(1), reader.GetDouble(2), reader.GetInt32(3), reader.GetString(4));
+            }
+            conexion.Close();$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
