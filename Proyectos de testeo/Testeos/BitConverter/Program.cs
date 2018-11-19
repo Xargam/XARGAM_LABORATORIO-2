@@ -11,27 +11,28 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace BitConverter
+
+namespace Jeje
 {
-    public delegate bool MiDelegado();
-
-    internal class Program
+    public class Program
 	{
-
-        public static event MiDelegado Eventooo;
         public static void Main(string[] args)
         {
-            Eventooo += new MiDelegado(new Program().Metodo);
-            Program.Eventooo();
-        }
+            try
+            {
 
+                StreamReader stream = new StreamReader("gjgdflg");
+                stream.ReadToEnd();
+                stream.Close();
+            }
+            catch (Exception)
+            {
 
-
-        public   bool Metodo()
-        {
-            Console.WriteLine(true);
+                throw;
+            }
+           // Test test = new Test();
+           // test.Mostrar();
             Console.ReadKey();
-            return true;
         }
     }
 }

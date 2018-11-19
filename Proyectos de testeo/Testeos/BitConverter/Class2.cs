@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace BitConverter
 {
-    class Jaja : ISerializable<string> , Interface4
+    class Class2 : ISerializable<string>
     {
-        public void Msj(int metodo)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ISerializable<string>.Serializar(object obj)
+        void ISerializable<String>.Serializar(object obj)
         {
             throw new NotImplementedException();
         }
