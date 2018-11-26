@@ -1,6 +1,0 @@
-
-1- sudo apt install manpages-es manpages-es-extra
-	
-2- sudo dpkg-reconfigure locales
-
-3- Seleccionar ES-AR o ES-ES

@@ -1,0 +1,9 @@
+--------------------------------------------------------------------------------
+(1)** En caso de poseer windows 7  se deberá ir a la página de descarga de SQLSERVER 2012 , que es compatible e incluye Management Studio y todas las dependencias necesarias. La URL es https://www.microsoft.com/es-ar/download/details.aspx?id=29062
+
+(2)** Descargar el archivo ESN\x64\SQLEXPRADV_x64_ESN.exe UNICAMENTE , que contiene un instalador de SQLSERVER con todas las dependencias requeridas y libre de errores para la arquitectura correspondiente.
+
+(3)** Instalar SQLEXPRESS ADVANCED...
+
+(4)** Ejecutar y utilizar Management...
+--------------------------------------------------------------------------------
