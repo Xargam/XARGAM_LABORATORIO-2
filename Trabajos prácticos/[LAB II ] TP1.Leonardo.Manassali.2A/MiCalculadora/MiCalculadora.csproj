@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3FB3F5E5-3011-4A7B-8495-FFEB1C587C6A}</ProjectGuid>
+    <ProjectGuid>{E3D53B75-4F66-4931-AE23-FF2B62005AB1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MiCalculadora</RootNamespace>
     <AssemblyName>MiCalculadora</AssemblyName>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LaCalculadora.cs">
+    <Compile Include="FormCalculadora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LaCalculadora.Designer.cs">
-      <DependentUpon>LaCalculadora.cs</DependentUpon>
+    <Compile Include="FormCalculadora.Designer.cs">
+      <DependentUpon>FormCalculadora.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LaCalculadora.resx">
-      <DependentUpon>LaCalculadora.cs</DependentUpon>
+    <EmbeddedResource Include="FormCalculadora.resx">
+      <DependentUpon>FormCalculadora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,7 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{f301e33b-874c-4528-88c0-ce61d7422832}</Project>
+      <Project>{fd98dc24-753d-4d6a-acd1-b92dfbe0310a}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>

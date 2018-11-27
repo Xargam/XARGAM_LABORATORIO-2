@@ -12,26 +12,14 @@ using System.Data;
 using System.Runtime.Serialization.Formatters.Binary;
 
 
-namespace Jeje
+namespace BitConverter
 {
     public class Program
 	{
         public static void Main(string[] args)
         {
-            try
-            {
-
-                StreamReader stream = new StreamReader("gjgdflg");
-                stream.ReadToEnd();
-                stream.Close();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-           // Test test = new Test();
-           // test.Mostrar();
+            Class1 c1 = new Class1();
+            c1.Mostrar();
             Console.ReadKey();
         }
     }

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BitConverter
+namespace Ejercicio_64
 {
-    interface Interface4
+    class Program
     {
-        void Msj(int metodo);
+        static void Main(string[] args)
+        {
+        }
     }
 }

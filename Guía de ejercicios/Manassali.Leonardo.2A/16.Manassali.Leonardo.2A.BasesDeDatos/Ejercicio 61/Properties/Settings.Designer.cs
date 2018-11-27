@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BitConverter.Properties {
+namespace Ejercicio_61.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,9 +26,10 @@ namespace BitConverter.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        public string Valor {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"(localdb)\\Xargam 1\";Integrated Security=True")]
+        public string Conexion {
             get {
-                return ((string)(this["Valor"]));
+                return ((string)(this["Conexion"]));
             }
         }
     }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B12D835E-2302-4689-ABAA-6F076554177F}</ProjectGuid>
+    <ProjectGuid>{F5B09DE3-396B-4F60-9839-C38A5AE06757}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BitConverter</RootNamespace>
-    <AssemblyName>Proyecto</AssemblyName>
+    <RootNamespace>Ejercicio_64</RootNamespace>
+    <AssemblyName>Ejercicio 64</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
-    <Compile Include="Class3.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="ClientePlus.cs" />
-    <Compile Include="Interface3.cs" />
+    <Compile Include="Caja.cs" />
+    <Compile Include="Negocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,21 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BitConverter
+﻿namespace BitConverter
 {
-    class Jaja : ISerializable<string> , Interface4
+    public delegate void MiDelegado(string hola);
+
+    public class Class1
     {
-        public void Msj(int metodo)
+        public event MiDelegado eventito;
+        public string Mostrar()
         {
-            throw new NotImplementedException();
+            this.eventito += new MiDelegado(this.Hola);
+            this.eventito("fsd");
+            return "";
+        }
+        public void Hola(string hoteleria)
+        {
+            System.Console.WriteLine(hoteleria);
         }
 
-        void ISerializable<string>.Serializar(object obj)
+        public void Hola2(string hoteleria, string d)
         {
-            throw new NotImplementedException();
+            System.Console.WriteLine(hoteleria);
         }
     }
 }

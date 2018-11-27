@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BitConverter
 {
-    interface ISerializable <T>
+    interface Interface3
     {
-        void Serializar(object obj);
+        string MiMetodo();
     }
 }

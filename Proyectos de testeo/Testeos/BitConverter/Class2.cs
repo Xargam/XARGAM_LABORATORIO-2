@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace BitConverter
 {
-    class Class2 : ISerializable<string>
+    class Class2 : Class1
     {
-        void ISerializable<String>.Serializar(object obj)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
